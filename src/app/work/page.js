@@ -1,6 +1,8 @@
 import Project from '@/components/project';
 import { fetchProjects } from '@/xhr/utils';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const projects = await fetchProjects();
   console.log(projects);
