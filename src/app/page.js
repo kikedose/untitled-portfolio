@@ -15,7 +15,7 @@ export default function Home() {
         <section className="h-auto rounded-lg bg-white">
           <div className="w-full p-8">
             <p className="w-[50ch] font-bold text-zinc-950">
-              We're dedicated to crafting distinctive visual identities that
+              We&apos;re dedicated to crafting distinctive visual identities that
               speak to the essence of each brand. We specialize in designing
               logos, typography, and other essential elements that help
               businesses stand out in a crowded market.
