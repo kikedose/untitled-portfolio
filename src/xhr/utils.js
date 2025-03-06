@@ -1,7 +1,13 @@
-export const fetchProjects = async () => {
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api`, { cache: 'no-store' });
-  const res = await fetch('https://untitled-portfolio.vercel.app/api', { cache: 'force-cache' });
+import { headers } from 'next/headers';
 
+export const fetchProjects = async () => {
+  const headersList = await headers();
+  const host = headersList.get('host'); // Get the current host
+
+  const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
+  const baseUrl = `${protocol}://${host}/api`;
+
+  const res = await fetch(baseUrl, { cache: 'no-store' });
 
   if (!res.ok) {
     throw new Error('Failed to fetch projects');
