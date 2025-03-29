@@ -18,7 +18,10 @@ import {
 import { Input } from '~/components/ui/input';
 
 const FormSchema = z.object({
-  username: z.string().min(2, {
+  username: z.string().min(6, {
+    message: 'Username must be at least 2 characters.',
+  }),
+  password: z.string().min(9, {
     message: 'Username must be at least 2 characters.',
   }),
 });
@@ -28,6 +31,7 @@ export default function InputForm() {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       username: '',
+      password: '',
     },
   });
 
@@ -44,13 +48,32 @@ export default function InputForm() {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>
+                Username<span className="text-red-500">*</span>
+              </FormLabel>
               <FormControl>
                 <Input placeholder="shadcn" {...field} />
               </FormControl>
               <FormDescription>
                 This is your public display name.
               </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="password"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>
+                Password<span className="text-red-500">*</span>
+              </FormLabel>
+              <FormControl>
+                <Input placeholder="666" {...field} />
+              </FormControl>
+              <FormDescription>Enter your password.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
