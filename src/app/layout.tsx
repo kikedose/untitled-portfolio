@@ -1,5 +1,3 @@
-import Footer from '~/components/footer';
-import Navigation from '~/components/navigation';
 import { Toaster } from '~/components/ui/sonner';
 import '~/styles/globals.css';
 
@@ -28,9 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className={`mx-auto max-w-[94rem] antialiased`}>
-        <Navigation />
-        <main className='w-full'>{children}</main>
-        <Footer />
+        {children}
         <Toaster />
       </body>
     </html>
