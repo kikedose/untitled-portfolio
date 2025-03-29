@@ -1,6 +1,16 @@
 import { headers } from 'next/headers';
 
-export const fetchProjects = async () => {
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl?: string;
+  technologies?: string[];
+  githubUrl?: string;
+  liveUrl?: string;
+}
+
+export const fetchProjects = async (): Promise<Project[]> => {
   const headersList = await headers();
   const host = headersList.get('host'); // Get the current host
 
@@ -13,5 +23,5 @@ export const fetchProjects = async () => {
     throw new Error('Failed to fetch projects');
   }
 
-  return res.json();
+  return res.json() as Promise<Project[]>;
 };
