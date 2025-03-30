@@ -1,6 +1,6 @@
+import { notFound } from 'next/navigation';
 import type { Project } from '~/lib/types/admin/project';
-import { columns } from './columns';
-import { DataTable } from './data-table';
+import EditProjectForm from '~/components/admin/EditProjectForm';
 
 async function getData(): Promise<Project[]> {
   return new Promise((resolve) => {
@@ -35,14 +35,23 @@ async function getData(): Promise<Project[]> {
   });
 }
 
-export default async function Dashboard() {
+export default async function EditProject({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
   const data = await getData();
+  const currentProject = data.find((project) => project.id === id);
+  console.log(currentProject);
+
+  if (!currentProject) {
+    notFound();
+  }
 
   return (
-    <div>
-      <div>Yeet</div>
-      <DataTable columns={columns} data={data} />
-      <div>Yeesh</div>
-    </div>
+    <>
+      <EditProjectForm currentProject={currentProject} />
+    </>
   );
 }

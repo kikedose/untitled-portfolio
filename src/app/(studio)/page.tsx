@@ -1,5 +1,5 @@
 // import Link from 'next/link';
-import ProjectCard from '~/components/project-card';
+import ProjectCard from '~/components/studio/ProjectCard';
 
 export default function HomePage() {
   return (

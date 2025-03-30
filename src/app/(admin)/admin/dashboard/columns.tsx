@@ -1,6 +1,7 @@
 'use client';
 
 import type { ColumnDef } from '@tanstack/react-table';
+import type { Project } from '~/lib/types/admin/project';
 import { Button } from '~/components/ui/button';
 import {
   DropdownMenu,
@@ -18,16 +19,6 @@ import {
   Pencil,
   Trash2,
 } from 'lucide-react';
-
-export type Project = {
-  id: string;
-  title: string;
-  country: string;
-  year: string;
-  description: string;
-  hidden: boolean;
-  // uploaded: string;
-};
 
 export const columns: ColumnDef<Project>[] = [
   {
