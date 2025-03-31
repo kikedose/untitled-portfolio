@@ -40,7 +40,7 @@ export default function AuthForm() {
   };
 
   return (
-    <div className="grid h-dvh w-full place-items-center border border-white">
+    <div className="grid h-dvh w-full place-items-center border border-zinc-50">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

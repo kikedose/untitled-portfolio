@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="align-center mb-4 flex w-full flex-col justify-center px-8">
-      <div className="w-full rounded-md border-2 px-8 py-4 font-[family-name:var(--font-geist-mono)]">
+    <footer className="w-full p-8">
+      <div className="rounded-md border border-zinc-50 p-4">
         <ul>
           <li>
             <a
@@ -22,7 +22,9 @@ export default function Footer() {
             </a>
           </li>
           <li>+54 9 351 202-3227</li>
-          <li className="pt-8">Copyright © 2025 Untitled Design Graphique_</li>
+          <li className="font-[family-name:var(--font-geist-mono)]">
+            Copyright © 2025 Untitled Design Graphique_
+          </li>
         </ul>
       </div>
     </footer>

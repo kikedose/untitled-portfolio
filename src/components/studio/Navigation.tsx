@@ -7,21 +7,21 @@ export default function Navigation() {
         <div className="flex items-baseline gap-4">
           <Link
             href="/"
-            className="rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-white transition-all duration-200 hover:border-2 hover:border-white active:bg-zinc-50/50"
+            className="rounded-md border border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-zinc-50 transition-all duration-200 hover:border hover:border-zinc-50 active:bg-zinc-50/50"
           >
             UNTITLED DESIGN STUDIO_
           </Link>
 
           <Link
             href="/web-labs"
-            className="rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-white transition-all duration-200 hover:border-2 hover:border-white active:bg-zinc-50/50"
+            className="rounded-md border border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-zinc-50 transition-all duration-200 hover:border hover:border-zinc-50 active:bg-zinc-50/50"
           >
             WEB LABS
           </Link>
 
           <Link
             href="/contact"
-            className="rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-white transition-all duration-200 hover:border-2 hover:border-white active:bg-zinc-50/50"
+            className="rounded-md border border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-zinc-50 transition-all duration-200 hover:border hover:border-zinc-50 active:bg-zinc-50/50"
           >
             CONTACT
           </Link>

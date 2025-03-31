@@ -14,7 +14,7 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <div className="h-[31rem] w-3xl overflow-clip rounded-lg bg-zinc-950 outline-2 transition-all duration-200 hover:opacity-75">
+    <div className="overflow-clip rounded-lg bg-zinc-950 transition-all duration-200 hover:outline-2 hover:outline-zinc-50 md:h-[31rem] md:w-[24rem]">
       <Image
         src={image}
         alt={title}
