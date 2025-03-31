@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 // 2. Types
 import type { z } from 'zod';
+import type { Project } from '~/lib/types/admin/project';
 
 // 3. Schemas
 import EditProjectSchema from '~/lib/schemas/EditProjectSchema';
@@ -28,15 +29,23 @@ import { Textarea } from '~/components/ui/textarea';
 // 5. Icons
 import { PlusCircle, X } from 'lucide-react';
 
-export default function EditProjectForm() {
+type EditProjectFormProps = {
+  currentProject: Project;
+};
+
+export default function EditProjectForm({
+  currentProject,
+}: EditProjectFormProps) {
+  const { title, country, year, description, links } = currentProject;
+
   const form = useForm<z.infer<typeof EditProjectSchema>>({
     resolver: zodResolver(EditProjectSchema),
     defaultValues: {
-      title: '',
-      country: '',
-      year: '',
-      description: '',
-      links: [],
+      title: title,
+      country: country,
+      year: year,
+      description: description,
+      links: links,
     },
   });
 
@@ -203,4 +212,3 @@ export default function EditProjectForm() {
     </div>
   );
 }
-

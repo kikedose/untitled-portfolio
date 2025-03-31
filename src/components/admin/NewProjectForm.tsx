@@ -197,6 +197,7 @@ export default function NewProjectForm() {
             </div>
           ))}
 
+          <Button type="button" onClick={() => console.log(fields)}>Print Fields</Button>
           <Button type="submit">Submit</Button>
         </form>
       </Form>

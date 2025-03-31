@@ -1,3 +1,8 @@
+type ExternalLink = {
+  text: string,
+  url: string,
+}
+
 export type Project = {
   id: string;
   title: string;
@@ -5,5 +10,6 @@ export type Project = {
   year: string;
   description: string;
   hidden: boolean;
+  links: ExternalLink[];
   // uploaded: string;
 };
