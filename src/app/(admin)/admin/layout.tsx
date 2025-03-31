@@ -1,11 +1,10 @@
-export default function AdminLayout({
+export default function StudioLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div>
-      <nav>Admin Navigation</nav>
-      <main>{children}</main>
-      <footer>Admin Footer</footer>
-    </div>
+    <main>
+      {children}
+    </main>
   );
 }
+

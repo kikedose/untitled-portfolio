@@ -1,16 +1,13 @@
-import Footer from '~/components/footer';
-import Navigation from '~/components/navigation';
 import { Toaster } from '~/components/ui/sonner';
 import '~/styles/globals.css';
 
-import { type Metadata } from 'next';
+// import { type Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 
-export const metadata: Metadata = {
-  title: 'Untitled Design Studio',
-  description: 'Web Portfolio',
-  icons: [{ rel: 'icon', url: '/favicon.ico' }],
-};
+// export const metadata: Metadata = {
+//   title: 'Untitled Design Studio',
+//   description: 'Web Portfolio',
+// };
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,11 +23,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} dark`}
+    >
       <body className={`mx-auto max-w-[94rem] antialiased`}>
-        <Navigation />
-        <main className='w-full'>{children}</main>
-        <Footer />
+        {children}
         <Toaster />
       </body>
     </html>
