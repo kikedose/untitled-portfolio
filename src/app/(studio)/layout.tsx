@@ -7,9 +7,7 @@ export default function StudioLayout({
   return (
     <body className={`mx-auto max-w-[94rem] antialiased`}>
       <Navigation />
-      <main className="w-full border border-red-500 px-8 pt-16">
-        {children}
-      </main>
+      <main className="w-full px-8 pt-16">{children}</main>
       <Footer />
     </body>
   );
