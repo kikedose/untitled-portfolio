@@ -2,8 +2,8 @@ import { Instagram, Mail, PhoneOutgoing } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full p-8">
-      <div className="rounded-md border border-zinc-50 p-4">
+    <footer className="w-full p-8 pt-16">
+      <div className="border-primary rounded-md border-2 p-4">
         <ul className="inline-flex flex-row gap-4">
           <li>
             <a href="https://www.instagram.com/untitled.dg/" target="_blank">

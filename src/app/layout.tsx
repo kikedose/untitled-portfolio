@@ -1,6 +1,7 @@
-import '~/styles/globals.css';
 import { type Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { ThemeProvider } from '~/components/studio/ThemeProvider';
+import '~/styles/globals.css';
 
 export const metadata: Metadata = {
   title: 'Untitled Design Studio',
@@ -23,9 +24,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
     >
-      <body className={`mx-auto max-w-[94rem] antialiased`}>{children}</body>
+      <body className={`mx-auto max-w-[94rem] antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

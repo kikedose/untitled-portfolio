@@ -1,31 +1,34 @@
 import Link from 'next/link';
+import ThemeSwitch from './ThemeSwitch';
 
 export default function Navigation() {
   return (
-    <nav className="z-50 hidden min-w-screen bg-zinc-950/50 backdrop-blur-md md:fixed md:block">
-      <div className="flex h-16 items-center justify-between pl-6">
-        <div className="flex items-baseline gap-4">
-          <Link
-            href="/"
-            className="rounded-md border border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-zinc-50 transition-all duration-200 hover:border hover:border-zinc-50 active:bg-zinc-50/50"
-          >
-            UNTITLED DESIGN STUDIO_
-          </Link>
+    <nav className="bg-background/50 z-50 hidden w-full max-w-[94rem] backdrop-blur-md md:fixed md:block">
+      <div className="flex h-16 w-full items-center gap-4 pr-4">
+        <Link
+          href="/"
+          className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-200 hover:border-2"
+        >
+          UNTITLED DESIGN STUDIO_
+        </Link>
 
-          <Link
-            href="/web-labs"
-            className="rounded-md border border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-zinc-50 transition-all duration-200 hover:border hover:border-zinc-50 active:bg-zinc-50/50"
-          >
-            WEB LABS
-          </Link>
+        <Link
+          href="/web-labs"
+          className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-200 hover:border-2"
+        >
+          WEB LABS
+        </Link>
 
-          <Link
-            href="/contact"
-            className="rounded-md border border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm text-zinc-50 transition-all duration-200 hover:border hover:border-zinc-50 active:bg-zinc-50/50"
-          >
-            CONTACT
-          </Link>
-        </div>
+        <Link
+          href="/info"
+          className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-200 hover:border-2"
+        >
+          INFO
+        </Link>
+
+        <span className="ml-auto">
+          <ThemeSwitch />
+        </span>
       </div>
     </nav>
   );
