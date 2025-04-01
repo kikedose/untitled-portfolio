@@ -50,6 +50,7 @@ export default async function LocaleLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
+          storageKey="theme"
         >
           <NextIntlClientProvider>{children}</NextIntlClientProvider>
         </ThemeProvider>

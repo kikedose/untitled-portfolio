@@ -1,9 +1,6 @@
 'use client';
 
-// import clsx from 'clsx';
 import { useParams } from 'next/navigation';
-// import { Locale } from 'next-intl';
-import { useTransition } from 'react';
 import { usePathname, useRouter } from '~/i18n/navigation';
 
 export default function LanguageSwitch() {
