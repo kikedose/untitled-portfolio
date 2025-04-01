@@ -1,18 +1,20 @@
-// import Link from 'next/link';
-// import '~/styles/pulse-gradient.css';
+import { useTranslations } from 'next-intl';
+// import {Link} from '@/i18n/navigation';
 import ProjectCard from '~/components/studio/ProjectCard';
 import { CircleArrowDown } from 'lucide-react';
 
 export default function HomePage() {
+  const t = useTranslations('HomePage');
+
   return (
     <div className="flex flex-col gap-8 font-[family-name:var(--font-geist-sans)]">
       <section className="grid h-[calc(100dvh-4rem)] w-full items-center">
         <span className="pb-8">
           <h1 className="w-min pb-8 text-6xl font-bold md:text-8xl">
-            Designs that breathe.
+            {t('hero')}
           </h1>
 
-          <div className="max-w-sm rounded-md border-2 border-primary p-4 font-[family-name:var(--font-geist-mono)] text-xl md:text-2xl">
+          <div className="border-primary max-w-sm rounded-md border-2 p-4 font-[family-name:var(--font-geist-mono)] text-xl md:text-2xl">
             <h2>
               We&apos;re dedicated to crafting{' '}
               <span className="text-rose-700">

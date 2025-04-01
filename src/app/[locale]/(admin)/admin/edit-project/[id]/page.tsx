@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import type { Project } from '~/lib/types/admin/project';
+import { type Project } from '~/lib/types/admin/project';
 import { mockData } from '~/lib/mockData';
 import EditProjectForm from '~/components/admin/EditProjectForm';
 

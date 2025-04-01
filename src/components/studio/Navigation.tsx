@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LanguageSwitch from '~/components/studio/LanguageSwitch';
 import ThemeSwitch from './ThemeSwitch';
 
 export default function Navigation() {
@@ -28,6 +29,8 @@ export default function Navigation() {
 
         <span className="ml-auto">
           <ThemeSwitch />
+          &nbsp;
+          <LanguageSwitch />
         </span>
       </div>
     </nav>
