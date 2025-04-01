@@ -14,7 +14,7 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <div className="overflow-clip rounded-lg bg-zinc-950 transition-all duration-200 hover:outline-2 hover:outline-zinc-50 md:h-[31rem] md:w-[24rem]">
+    <div className="overflow-clip transition-all duration-200 hover:opacity-75 lg:h-[28rem] lg:w-[24rem]">
       <Image
         src={image}
         alt={title}
@@ -25,10 +25,10 @@ export default function ProjectCard({
         quality={85}
       />
 
-      <div className="p-4">
-        <h2 className="text-2xl">{title}</h2>
+      <div className="pt-1 pl-2">
+        <h2 className="text-xl">{title}</h2>
 
-        <h3 className="w-max bg-zinc-50 px-2 font-[family-name:var(--font-geist-mono)] text-zinc-950">
+        <h3 className="text-primary-foreground w-max bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm">
           {country}, {year}
         </h3>
       </div>
