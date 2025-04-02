@@ -1,5 +1,10 @@
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { db } from '~/server/db';
+
+export async function generateMetadata() {
+  return null;
+}
 
 export default async function Project({
   params,
@@ -9,7 +14,13 @@ export default async function Project({
   const { id } = await params;
   console.log({ id });
 
-  const project = await db.query.projects.findFirst();
+  const project = await db.query.projects.findFirst({
+    where: (projects, { eq }) => eq(projects.id, id)
+  });
+
+  if (!project) {
+    notFound();
+  }
 
   return (
     <div className="md:pt-32">

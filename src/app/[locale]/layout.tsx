@@ -1,13 +1,5 @@
-// 1. Next libraries
 import { type Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import { Geist, Geist_Mono } from 'next/font/google';
-
-// 2. Internationalization and Localization
-import { type Locale, hasLocale, NextIntlClientProvider } from 'next-intl';
-import { routing } from '~/i18n/routing';
-
-// 3. Theme and styles
 import { ThemeProvider } from '~/components/studio/ThemeProvider';
 import '~/styles/globals.css';
 
@@ -31,12 +23,9 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
 
   return (
     <html
@@ -52,7 +41,7 @@ export default async function LocaleLayout({
           disableTransitionOnChange
           storageKey="theme"
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          {children}
         </ThemeProvider>
       </body>
     </html>

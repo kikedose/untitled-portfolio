@@ -1,7 +1,6 @@
 'use client';
 
-import { useParams } from 'next/navigation';
-import { usePathname, useRouter } from '~/i18n/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 
 export default function LanguageSwitch() {
   const router = useRouter();
