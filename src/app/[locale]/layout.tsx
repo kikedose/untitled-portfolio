@@ -4,7 +4,7 @@ import { ThemeProvider } from '~/components/studio/ThemeProvider';
 import '~/styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'Untitled Design Studio',
+  title: 'Untitled Design Studio_',
   description: 'Web Portfolio',
 };
 

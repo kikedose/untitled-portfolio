@@ -18,12 +18,16 @@ export const projects = createTable(
   'project',
   (d) => ({
     id: d.uuid().notNull().primaryKey().defaultRandom(),
-    title: d.varchar({ length: 256 }),
-    country: d.varchar({ length: 256 }),
-    year: d.char({ length: 4 }),
-    description: d.varchar({ length: 560 }),
-    hidden: d.boolean().default(false),
-    links: d.json().$type<{ text: string; url: string }[]>(),
+    title: d.varchar({ length: 256 }).notNull(),
+    country: d.varchar({ length: 256 }).notNull(),
+    year: d.char({ length: 4 }).notNull(),
+    description: d.varchar({ length: 560 }).notNull(),
+    hidden: d.boolean().default(false).notNull(),
+    links: d
+      .json()
+      .$type<{ text: string; url: string }[]>()
+      .default([])
+      .notNull(),
     createdAt: d
       .timestamp({ withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)

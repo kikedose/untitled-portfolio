@@ -1,9 +1,7 @@
-// import {Link} from '@/i18n/navigation';
 import ProjectCard from '~/components/studio/ProjectCard';
 import { CircleArrowDown } from 'lucide-react';
 
 export default function HomePage() {
-
   return (
     <div className="flex flex-col justify-center gap-8 font-[family-name:var(--font-geist-sans)] md:justify-start">
       {/* <section className="grid h-[calc(100dvh-4rem)] w-full items-start"> */}
