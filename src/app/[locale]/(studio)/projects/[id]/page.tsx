@@ -34,7 +34,7 @@ export default async function Project({
         <h2 className="font-[family-name:var(--font-geist-mono)] text-2xl">
           {project.title}
         </h2>
-        <h3 className="w-max bg-zinc-50 px-2 font-[family-name:var(--font-geist-mono)] text-zinc-950">
+        <h3 className="bg-foreground text-background w-max px-2 font-[family-name:var(--font-geist-mono)]">
           {project.country}, {project.year}
         </h3>
 
@@ -46,6 +46,7 @@ export default async function Project({
               className="font-[family-name:var(--font-geist-mono)] hover:underline hover:decoration-dotted"
               href={link.url}
               key={link.url}
+              target="_blank"
             >
               <li>
                 {link.text} {'->'}

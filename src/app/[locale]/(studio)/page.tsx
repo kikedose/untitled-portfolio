@@ -1,7 +1,10 @@
 import ProjectCard from '~/components/studio/ProjectCard';
 import { CircleArrowDown } from 'lucide-react';
+import { retrieveAllProjects } from '~/lib/queries';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const projects = await retrieveAllProjects();
+
   return (
     <div className="flex flex-col justify-center gap-8 font-[family-name:var(--font-geist-sans)] md:justify-start">
       {/* <section className="grid h-[calc(100dvh-4rem)] w-full items-start"> */}
@@ -10,7 +13,7 @@ export default function HomePage() {
           <h1 className="mx-auto max-w-[12ch] text-center text-5xl/10 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/22 md:font-semibold">
             Designs that breathe.
           </h1>
-          <p className="[word-spacing:-1px] max-w-sm px-4 pt-8 text-center text-sm md:px-0 md:text-left md:text-xl">
+          <p className="max-w-sm px-4 pt-8 text-center text-sm [word-spacing:-1px] md:px-0 md:text-left md:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -36,71 +39,16 @@ export default function HomePage() {
         className="grid w-full gap-4 md:grid-cols-2 xl:grid-cols-3"
         id="projects"
       >
-        <ProjectCard
-          title="Caos Mobiliario"
-          year={2019}
-          country="Argentina"
-          image="https://hol0sh4bse.ufs.sh/f/t5f2s1J1pIMURWZ2xRv4RBWnZ0gTpC5SDMPyONmEIbkJQ8hL"
-        />
-
-        <ProjectCard
-          title="Dark Matter"
-          year={2022}
-          country="Spain"
-          image="https://hol0sh4bse.ufs.sh/f/t5f2s1J1pIMUCG1SvA3Kd5yarPLGAJ9Y6oDkjgQ8uvUic47S"
-        />
-
-        <ProjectCard
-          title="Torre de Marfil"
-          year={2023}
-          country="Argentina"
-          image="https://hol0sh4bse.ufs.sh/f/t5f2s1J1pIMUk468NXovisd4eyHTu7QobMqlNrJwaWLRzIS2"
-        />
-
-        <ProjectCard
-          title="Caos Mobiliario"
-          year={2019}
-          country="Argentina"
-          image="https://hol0sh4bse.ufs.sh/f/t5f2s1J1pIMURWZ2xRv4RBWnZ0gTpC5SDMPyONmEIbkJQ8hL"
-        />
-
-        <ProjectCard
-          title="Dark Matter"
-          year={2022}
-          country="Spain"
-          image="https://hol0sh4bse.ufs.sh/f/t5f2s1J1pIMUCG1SvA3Kd5yarPLGAJ9Y6oDkjgQ8uvUic47S"
-        />
-
-        <ProjectCard
-          title="Torre de Marfil"
-          year={2023}
-          country="Argentina"
-          image="https://hol0sh4bse.ufs.sh/f/t5f2s1J1pIMUk468NXovisd4eyHTu7QobMqlNrJwaWLRzIS2"
-        />
-
-        <ProjectCard
-          title="Caos Mobiliario"
-          year={2019}
-          country="Argentina"
-          image="https://hol0sh4bse.ufs.sh/f/t5f2s1J1pIMURWZ2xRv4RBWnZ0gTpC5SDMPyONmEIbkJQ8hL"
-        />
-
-        <ProjectCard
-          title="Dark Matter"
-          year={2022}
-          country="Spain"
-          image="https://hol0sh4bse.ufs.sh/f/t5f2s1J1pIMUCG1SvA3Kd5yarPLGAJ9Y6oDkjgQ8uvUic47S"
-        />
-
-        {/* {projects.map((project) => (
+        {projects?.map((project) => (
           <ProjectCard
+            id={project.id}
             key={project.id}
             title={project.title}
             year={project.year}
             country={project.country}
-            image={project.images[0]}
+            thumbnail={project.thumbnail}
           />
-        ))} */}
+        ))}
 
         {/* <div className="w-sm overflow-clip rounded-lg p-8 text-xl text-zinc-500">
           {[

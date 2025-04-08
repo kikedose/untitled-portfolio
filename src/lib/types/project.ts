@@ -11,4 +11,5 @@ export type Project = {
   description: string;
   hidden: boolean;
   links: ExternalLink[];
+  thumbnail: string;
 };

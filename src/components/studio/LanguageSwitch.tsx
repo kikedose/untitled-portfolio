@@ -10,13 +10,10 @@ export default function LanguageSwitch() {
   const triggerLocaleSwitch = () => {
     const nextLocale = params.locale === 'en' ? 'es' : 'en';
 
-    router.replace(
-      // @ts-expect-error -- TypeScript will validate that only known `params`
-      // are used in combination with a given `pathname`. Since the two will
-      // always match for the current route, we can skip runtime checks.
-      { pathname, params },
-      { locale: nextLocale }
-    );
+    console.log({
+      pathname,
+      params,
+    });
   };
 
   return (
