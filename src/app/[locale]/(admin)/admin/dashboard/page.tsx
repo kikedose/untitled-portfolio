@@ -1,4 +1,4 @@
-import { type Project } from '~/lib/types/admin/project';
+import { type Project } from '~/lib/types/project';
 import { mockData } from '~/lib/mockData';
 import { columns } from './columns';
 import { DataTable } from './data-table';

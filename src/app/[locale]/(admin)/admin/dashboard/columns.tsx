@@ -1,7 +1,7 @@
 'use client';
 
 import { type ColumnDef } from '@tanstack/react-table';
-import { type Project } from '~/lib/types/admin/project';
+import { type Project } from '~/lib/types/project';
 import { Button } from '~/components/ui/button';
 import {
   DropdownMenu,
