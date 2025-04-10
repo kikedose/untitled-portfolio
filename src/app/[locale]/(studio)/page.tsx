@@ -1,5 +1,11 @@
 import ProjectCard from '~/components/studio/ProjectCard';
-import { CircleArrowDown, CircleArrowRight } from 'lucide-react';
+import {
+  CircleArrowDown,
+  CircleArrowRight,
+  Instagram,
+  Mail,
+  PhoneOutgoing,
+} from 'lucide-react';
 import { retrieveAllProjects } from '~/lib/queries';
 import '~/styles/styles.css';
 
@@ -48,49 +54,44 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <div className="w-full border-b-2 pt-16 pb-8">
-        <h2 className="border-foreground w-full border-b-2 text-xl md:text-2xl">
-          Selected Works
-        </h2>
-      </div>
+      {/* Divider */}
+      <div className="border-foreground my-16 w-full border-b-2 text-xl md:text-2xl" />
 
-      <section
-        className="grid w-full gap-4 md:grid-cols-2 xl:grid-cols-3"
-        id="projects"
-      >
-        {projects?.map((project) => (
-          <ProjectCard
-            id={project.id}
-            key={project.id}
-            title={project.title}
-            year={project.year}
-            country={project.country}
-            thumbnail={project.thumbnail}
-          />
-        ))}
+      <section className="flex w-full justify-center" id="projects">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {projects?.map((project) => (
+            <ProjectCard
+              id={project.id}
+              key={project.id}
+              title={project.title}
+              year={project.year}
+              country={project.country}
+              thumbnail={project.thumbnail}
+            />
+          ))}
 
-        {projects?.map((project) => (
-          <ProjectCard
-            id={project.id}
-            key={project.id}
-            title={project.title}
-            year={project.year}
-            country={project.country}
-            thumbnail={project.thumbnail}
-          />
-        ))}
+          {projects?.map((project) => (
+            <ProjectCard
+              id={project.id}
+              key={project.id}
+              title={project.title}
+              year={project.year}
+              country={project.country}
+              thumbnail={project.thumbnail}
+            />
+          ))}
 
-        {projects?.map((project) => (
-          <ProjectCard
-            id={project.id}
-            key={project.id}
-            title={project.title}
-            year={project.year}
-            country={project.country}
-            thumbnail={project.thumbnail}
-          />
-        ))}
-
+          {projects?.map((project) => (
+            <ProjectCard
+              id={project.id}
+              key={project.id}
+              title={project.title}
+              year={project.year}
+              country={project.country}
+              thumbnail={project.thumbnail}
+            />
+          ))}
+        </div>
         {/* <div className="w-sm overflow-clip rounded-lg p-8 text-xl text-zinc-500">
           {[
             'visual identity',
@@ -107,6 +108,60 @@ export default async function HomePage() {
             </span>
           ))}
         </div> */}
+      </section>
+
+      {/* Divider */}
+      <div className="border-foreground my-16 w-full border-b-2 text-xl md:text-2xl" />
+
+      <section className="flex flex-col flex-wrap py-16 md:flex-row">
+        <div className="halftone px-8 md:w-2/4">
+          <h1 className="py-16 text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
+            <span className="bg-background box-decoration-clone px-4">
+              Say hi!
+            </span>
+          </h1>
+        </div>
+
+        <div className="grid place-items-center md:w-2/4">
+          <span>
+            <p className="text-lg font-semibold">Tell us about your project.</p>
+            <p className="text-lg">
+              Let&apos;s collaborate and make great stuff.
+            </p>
+
+            <div className="border-foreground mt-4 w-min rounded-md border-2 p-2">
+              <ul className="inline-flex flex-row gap-4">
+                <li>
+                  <a
+                    href="https://www.instagram.com/untitled.ds_/"
+                    target="_blank"
+                  >
+                    <Instagram />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:edominguez.se@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Mail />
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://wa.me/+5493512023227"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <PhoneOutgoing />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </span>
+        </div>
       </section>
     </div>
   );
