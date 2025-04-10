@@ -9,7 +9,7 @@ export default function StudioLayout({
     <>
       <ScrollProgress />
       <Navigation />
-      <main className="w-full pt-16">{children}</main>
+      <main className="w-full pt-8 md:pt-32">{children}</main>
       <Footer />
     </>
   );

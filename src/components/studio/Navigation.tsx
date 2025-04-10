@@ -16,7 +16,7 @@ export default function Navigation() {
       {/* Set the md:px-N <body>'s max-w-N */}
       <nav className="fixed inset-x-0 top-0 z-50 md:px-8">
         {/* MOBILE NAVIGATION */}
-        <div className="bg-background/20 flex w-full justify-between px-8 py-4 backdrop-blur-md md:hidden">
+        <div className="bg-background/20 flex w-full justify-between p-4 backdrop-blur-md md:hidden">
           <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium dark:font-semibold">
             unttld_
           </span>
@@ -25,13 +25,8 @@ export default function Navigation() {
             <Dialog>
               <DialogTrigger className="outline-none">[menu]</DialogTrigger>
               <DialogContent className="border-foreground bg-background/20 border-2 backdrop-blur-sm">
-                <span>
-                  <ThemeSwitch />
-                  &nbsp;
-                  <LanguageSwitch />
-                </span>
                 <DialogHeader>
-                  <DialogTitle className="font-[family-name:var(--font-geist-mono)] text-sm font-semibold text-zinc-400">
+                  <DialogTitle className="font-[family-name:var(--font-geist-mono)] text-sm font-semibold">
                     Untitled Design Studio_
                   </DialogTitle>
                 </DialogHeader>
@@ -47,6 +42,13 @@ export default function Navigation() {
                   </li>
                   <li className="py-2">
                     <Link href="/info">INFO {'->'}</Link>
+                  </li>
+                  <li>
+                    <span>
+                      <ThemeSwitch />
+                      &nbsp;
+                      <LanguageSwitch />
+                    </span>
                   </li>
                 </ul>
               </DialogContent>

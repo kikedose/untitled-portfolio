@@ -7,7 +7,7 @@ export default async function HomePage() {
   const projects = await retrieveAllProjects();
 
   return (
-    <div className="flex flex-col justify-center gap-8 font-[family-name:var(--font-geist-sans)] md:justify-start">
+    <div className="flex flex-col justify-center font-[family-name:var(--font-geist-sans)] md:justify-start">
       <section className="halftone w-full px-2 pb-8 md:pl-8">
         <h1 className="mx-auto max-w-[12ch] py-16 text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
           <span className="bg-background box-decoration-clone px-4">
@@ -48,9 +48,11 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <h2 className="border-foreground w-full border-b-2 pt-4 text-xl md:text-2xl">
-        Selected Works
-      </h2>
+      <div className="w-full border-b-2 pt-16 pb-8">
+        <h2 className="border-foreground w-full border-b-2 text-xl md:text-2xl">
+          Selected Works
+        </h2>
+      </div>
 
       <section
         className="grid w-full gap-4 md:grid-cols-2 xl:grid-cols-3"
