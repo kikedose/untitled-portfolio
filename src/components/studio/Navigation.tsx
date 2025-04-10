@@ -24,7 +24,7 @@ export default function Navigation() {
           <span>
             <Dialog>
               <DialogTrigger className="outline-none">[menu]</DialogTrigger>
-              <DialogContent className="border-foreground bg-background/20 border-2 backdrop-blur-sm">
+              <DialogContent className="border-foreground dark:bg-background/40 bg-background/50 border-2 backdrop-blur-sm">
                 <DialogHeader>
                   <DialogTitle className="font-[family-name:var(--font-geist-mono)] text-sm font-semibold">
                     Untitled Design Studio_
