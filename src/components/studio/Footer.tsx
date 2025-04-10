@@ -29,7 +29,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            [+54 9 351 202-3227]
+            [mobile]
           </a>
         </li>
       </ul>
