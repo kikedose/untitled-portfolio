@@ -28,7 +28,7 @@ export default function ProjectCard({
           className="object-cover"
         />
 
-        <div className="pt-1 pl-2">
+        <div className="pt-1">
           <h2 className="text-xl">{title}</h2>
 
           <h3 className="text-primary-foreground bg-foreground w-max px-2 font-[family-name:var(--font-geist-mono)] text-sm">

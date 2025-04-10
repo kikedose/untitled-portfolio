@@ -20,7 +20,7 @@ export default function ThemeSwitch() {
   return (
     <span>
       <button
-        className="hover:underline hover:decoration-dotted"
+        className="cursor-pointer hover:underline hover:decoration-dotted"
         onClick={() => handleSwitchTheme(theme)}
         suppressHydrationWarning
       >

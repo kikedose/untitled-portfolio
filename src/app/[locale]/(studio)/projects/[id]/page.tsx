@@ -29,8 +29,8 @@ export default async function Project({
   }
 
   return (
-    <div className="md:pt-32">
-      <div className="p-8 md:w-[50ch]">
+    <div className="border border-red-500 md:pt-8">
+      <div className="md:w-[50ch]">
         <h2 className="font-[family-name:var(--font-geist-mono)] text-2xl">
           {project.title}
         </h2>
@@ -38,7 +38,7 @@ export default async function Project({
           {project.country}, {project.year}
         </h3>
 
-        <p className="pt-8">{project.description}</p>
+        <p className="pt-8 text-justify text-sm">{project.description}</p>
 
         <ul className="pt-8 font-[family-name:var(--font-geist-mono)]">
           {project.links.map((link) => (

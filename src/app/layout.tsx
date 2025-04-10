@@ -33,7 +33,7 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className={`mx-auto max-w-[94rem] antialiased`}>
+      <body className="mx-auto max-w-[94rem] px-8 antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
