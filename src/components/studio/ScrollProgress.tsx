@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from "motion/react"
+import { motion } from 'motion/react';
 import { useScroll } from 'motion/react';
 
 export default function ScrollProgress() {
