@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 // 2. Types
 import type { z } from 'zod';
-import { type  Project } from '~/lib/types/admin/project';
+import { type Project } from '~/lib/types/project';
 
 // 3. Schemas
 import EditProjectSchema from '~/lib/schemas/EditProjectSchema';

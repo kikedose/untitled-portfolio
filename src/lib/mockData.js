@@ -7,6 +7,8 @@ export const mockData = [
     description: 'Lorem ipsum dolor sit amet.',
     hidden: false,
     links: [],
+    // creactedAt: NaN,
+    // updatedAt: NaN,
   },
   {
     id: '489e1d42',
@@ -28,5 +30,7 @@ export const mockData = [
       { text: 'Google', url: 'https://www.google.com' },
       { text: 'GitHub', url: 'https://www.github.com' },
     ],
+    // creactedAt: NaN,
+    // updatedAt: NaN,
   },
 ];

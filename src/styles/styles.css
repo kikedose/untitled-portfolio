@@ -1,0 +1,28 @@
+.halftone {
+  position: relative;
+  z-index: 0; /* Ensure children appear above the pseudo-element */
+}
+
+.halftone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* Push behind all content */
+
+  --dotSize: 0.0625rem;
+  --bgSize: 0.5rem;
+
+  background-image: radial-gradient(
+    circle at center,
+    oklch(70.5% 0.015 286.067) var(--dotSize),
+    transparent 0
+  );
+  background-size: var(--bgSize) var(--bgSize);
+  background-repeat: round;
+
+  mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0));
+  -webkit-mask-image: linear-gradient(
+    rgb(0 0 0),
+    rgb(0 0 0 / 0)
+  ); /* For Safari */
+}
