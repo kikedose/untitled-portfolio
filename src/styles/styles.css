@@ -1,0 +1,11 @@
+@import './globals.css';
+
+.halftone {
+  background-image: radial-gradient(
+    circle at center,
+    oklch(70.5% 0.015 286.067) 1px,
+    transparent 0
+  );
+  background-size: 0.5rem 0.5rem;
+  background-repeat: round;
+}
