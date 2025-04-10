@@ -10,7 +10,7 @@ export const createTable = pgTableCreator(
 );
 
 export const projects = createTable(
-  'project',
+  'projects-en',
   (d) => ({
     id: d.uuid().notNull().primaryKey().defaultRandom(),
     title: d.varchar({ length: 256 }).notNull(),
@@ -24,6 +24,7 @@ export const projects = createTable(
       .default([])
       .notNull(),
     thumbnail: d.varchar({ length: 256 }).notNull(),
+    blur: d.varchar({ length: 256 }).notNull(),
     images: d
       .json()
       .$type<{ alt: string; url: string }[]>()

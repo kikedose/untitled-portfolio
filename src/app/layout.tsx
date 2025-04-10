@@ -33,7 +33,7 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className={`mx-auto max-w-[94rem] antialiased`}>
+      <body className="antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -41,7 +41,14 @@ export default async function RootLayout({
           disableTransitionOnChange
           storageKey="theme"
         >
-          {children}
+          {/* Radix <Dialog /> messes with the <body>'s padding in small viepowrts */}
+          {/* Apply styles to wrapper instead of <body> */}
+          <div
+            id="#wrapper"
+            className="mx-auto max-w-[94rem] px-4 antialiased md:px-8"
+          >
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

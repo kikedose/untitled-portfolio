@@ -19,7 +19,8 @@ export default function LanguageSwitch() {
   return (
     <button
       // onClick={triggerLocaleSwitch}
-      className="hover:underline hover:decoration-dotted"
+      // className="hover:underline hover:decoration-dotted"
+      className="text-zinc-400"
     >
       {/* [{params.locale}] */}
       [en]
