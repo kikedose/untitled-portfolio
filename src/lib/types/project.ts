@@ -3,6 +3,11 @@ type ExternalLink = {
   url: string;
 };
 
+type Image = {
+  alt: string;
+  url: string;
+};
+
 export type Project = {
   id: string;
   title: string;
@@ -12,4 +17,6 @@ export type Project = {
   hidden: boolean;
   links: ExternalLink[];
   thumbnail: string;
+  blur: string;
+  images: Image[];
 };

@@ -67,6 +67,7 @@ export default async function HomePage() {
               year={project.year}
               country={project.country}
               thumbnail={project.thumbnail}
+              blur={project.blur}
             />
           ))}
 
@@ -78,20 +79,11 @@ export default async function HomePage() {
               year={project.year}
               country={project.country}
               thumbnail={project.thumbnail}
-            />
-          ))}
-
-          {projects?.map((project) => (
-            <ProjectCard
-              id={project.id}
-              key={project.id}
-              title={project.title}
-              year={project.year}
-              country={project.country}
-              thumbnail={project.thumbnail}
+              blur={project.blur}
             />
           ))}
         </div>
+
         {/* <div className="w-sm overflow-clip rounded-lg p-8 text-xl text-zinc-500">
           {[
             'visual identity',

@@ -7,6 +7,7 @@ type ProjectCardProps = {
   year: string;
   country: string;
   thumbnail: string;
+  blur: string;
 };
 
 export default function ProjectCard({
@@ -15,6 +16,7 @@ export default function ProjectCard({
   year,
   country,
   thumbnail,
+  blur,
 }: ProjectCardProps) {
   return (
     <div className="overflow-clip transition-all duration-200 hover:opacity-75 lg:h-[28rem] lg:w-[24rem]">
@@ -24,8 +26,10 @@ export default function ProjectCard({
           alt={title}
           width={384}
           height={384}
-          priority
-          className="object-cover"
+          placeholder="blur"
+          blurDataURL={blur}
+          priority={true}
+          quality={80}
         />
 
         <div className="pt-1">
