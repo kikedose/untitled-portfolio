@@ -56,7 +56,7 @@ export default async function Project({
       </div>
 
       <div className="md:w-1/2 md:px-4">
-        {project.images.map((image) => (
+        {project.images.map((image, index) => (
           <Image
             className="py-4"
             src={image.url}
@@ -65,6 +65,7 @@ export default async function Project({
             width={720}
             height={900}
             quality={100}
+            priority={!index}
           />
         ))}
       </div>
