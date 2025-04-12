@@ -1,0 +1,24 @@
+{
+  "home": {
+    "title": "Designs that breathe.",
+    "cta_01": {
+      "_01": "We bring brands to life online with thoughtful",
+      "_02": "web design and development.",
+      "_03": "Check out our web labs"
+    },
+    "cta_02": {
+      "_01": "We&apos;re dedicated to crafting",
+      "_02": "distinctive visual identities",
+      "_03": "that speak to",
+      "_04": "the essence of each brand.",
+      "_05": "Check out our work"
+    },
+    "nested": {
+      "nested": "nested EN"
+    },
+    "nest_ed": {
+      "nest_ed": "nest_ed EN"
+    }
+  }
+}
+

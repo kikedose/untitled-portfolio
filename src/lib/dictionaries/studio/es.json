@@ -1,0 +1,23 @@
+{
+  "home": {
+    "title": "Diseños que respiran.",
+    "cta_01": {
+      "_01": "Le damos vida a tu marca en línea con meticuloso",
+      "_02": "diseño y desarrollo web.",
+      "_03": "Conoce nuestros web labs"
+    },
+    "cta_02": {
+      "_01": "Nos dedicamos a la creación de",
+      "_02": "identidades visuales distintivas",
+      "_03": "que transmiten la",
+      "_04": "esencia de cada marca.",
+      "_05": "Mira nuestro trabajo"
+    },
+    "nested": {
+      "nested": "nested ES"
+    },
+    "nest_ed": {
+      "nest_ed": "nest_ed ES"
+    }
+  }
+}

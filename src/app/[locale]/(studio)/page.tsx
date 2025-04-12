@@ -7,9 +7,17 @@ import {
   PhoneOutgoing,
 } from 'lucide-react';
 import { retrieveAllProjects } from '~/lib/queries';
+import { getDictionary } from '~/lib/l10n';
 import '~/styles/styles.css';
 
-export default async function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: 'en' | 'es' }>;
+}) {
+  const { locale } = await params;
+  const d = await getDictionary('studio', locale);
+
   const projects = await retrieveAllProjects();
 
   return (
@@ -17,38 +25,38 @@ export default async function HomePage() {
       <section className="halftone w-full px-2 pb-8 md:pl-8">
         <h1 className="mx-auto max-w-[12ch] py-16 text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
           <span className="bg-background box-decoration-clone px-4">
-            Designs that breathe.
+            {d.home.title}
           </span>
         </h1>
 
         <div className="mt-4 flex flex-col gap-4 md:flex-row">
           <div className="bg-background border-primary max-w-sm rounded-md border-2 p-4 font-[family-name:var(--font-geist-mono)]">
             <p className="text-center text-lg md:text-left md:text-xl">
-              We&apos;re dedicated to crafting{' '}
-              <span className="text-rose-700">
-                distinctive visual identities{' '}
+              {d.home.cta_01._01}{' '}
+              <span className="text-teal-700">{d.home.cta_01._02}</span>
+              <br />
+              <span className="pt-4">
+                <a href="#projects" className="underline decoration-dotted">
+                  {d.home.cta_01._03}
+                  <CircleArrowRight className="ml-2 inline" />
+                </a>
               </span>
-              that speak to{' '}
-              <span className="text-orange-300">
-                the essence of each brand.{' '}
-              </span>
-              <a href="#projects" className="underline decoration-dotted">
-                Check out our work&nbsp;
-                <CircleArrowDown className="ml-2 inline" />
-              </a>
             </p>
           </div>
 
           <div className="bg-background border-primary max-w-sm rounded-md border-2 p-4 font-[family-name:var(--font-geist-mono)]">
             <p className="text-center text-lg md:text-left md:text-xl">
-              We bring brands to life online with thoughtful{' '}
-              <span className="text-teal-700">
-                web design and development.{' '}
+              {d.home.cta_02._01}{' '}
+              <span className="text-rose-700">{d.home.cta_02._02} </span>
+              {d.home.cta_02._03}{' '}
+              <span className="text-orange-300">{d.home.cta_02._04} </span>
+              <br />
+              <span className="pt-4">
+                <a href="#projects" className="underline decoration-dotted">
+                  {d.home.cta_02._05}
+                  <CircleArrowDown className="ml-2 inline" />
+                </a>
               </span>
-              <a href="#projects" className="underline decoration-dotted">
-                Check out our web labs&nbsp;
-                <CircleArrowRight className="ml-2 inline" />
-              </a>
             </p>
           </div>
         </div>
