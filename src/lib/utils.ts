@@ -29,7 +29,6 @@ export const parseAcceptLanguage = (
     return [];
   }
 
-  // Define an interface for clarity
   interface LanguagePreference {
     tag: string;
     quality: number;
@@ -42,9 +41,8 @@ export const parseAcceptLanguage = (
       const parts = langEntry.trim().split(';q=');
       const tag = parts[0]?.trim(); // Use optional chaining for safety
 
-      // Ensure tag exists before proceeding
       if (!tag) {
-        return null; // Skip invalid entries
+        return null;
       }
 
       // Default quality is 1 if not specified or parsing fails
@@ -55,16 +53,14 @@ export const parseAcceptLanguage = (
         quality =
           !isNaN(parsedQuality) && parsedQuality >= 0 && parsedQuality <= 1
             ? parsedQuality
-            : 1.0; // Default to 1.0 if invalid q value
+            : 1.0;
       }
       return { tag, quality };
     })
-    .filter((lang): lang is LanguagePreference => lang !== null); // Filter out any null entries from invalid parts
+    .filter((lang): lang is LanguagePreference => lang !== null);
 
-  // Sort languages by quality in descending order
   languages.sort((a, b) => b.quality - a.quality);
 
-  // Return just the tags in order of preference
   return languages.map((lang) => lang.tag);
 };
 
@@ -87,41 +83,30 @@ export function findBestMatch(
   supportedLocales: string[],
   defaultLocale: string
 ): string {
-  // Use Set for efficient lookups (O(1) average time complexity)
   const supportedLocalesSet = new Set<string>(supportedLocales);
 
   for (const preferredLang of preferredLanguages) {
-    // 1. Check for exact match (case-sensitive based on input)
-    // BCP 47 tags are case-insensitive, but exact matching might be desired sometimes.
-    // For case-insensitive exact match, convert both preferredLang and items in supportedLocalesSet to lower/upper case.
     if (supportedLocalesSet.has(preferredLang)) {
       return preferredLang;
     }
 
-    // 2. Check for base language match
-    // Extract base language (e.g., 'en' from 'en-US', 'fr' from 'fr-FR')
-    // Language tags are generally case-insensitive, so normalize to lower case.
     const basePreferredLang = preferredLang.split('-')[0]?.toLowerCase();
 
     if (basePreferredLang) {
-      // Check if any supported locale has the same base language
       for (const supportedLocale of supportedLocales) {
         const baseSupportedLocale = supportedLocale
           .split('-')[0]
           ?.toLowerCase();
         if (basePreferredLang === baseSupportedLocale) {
-          // Return the *supported* locale that matches the base language
           return supportedLocale;
         }
       }
 
-      // 3. Check if the base language itself is directly supported (e.g., 'en' is preferred and 'en' is supported)
       if (supportedLocalesSet.has(basePreferredLang)) {
         return basePreferredLang;
       }
     }
   }
 
-  // If no match found after checking all preferences, return default
   return defaultLocale;
 }
