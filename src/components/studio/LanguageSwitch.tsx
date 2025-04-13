@@ -12,7 +12,7 @@ export default function LanguageSwitch() {
     const nextLocale = locale === 'en' ? 'es' : 'en';
     const href = pathname.replace(locale, nextLocale);
 
-    router.replace(href);
+    router.replace(href, { scroll: false });
   };
 
   return (

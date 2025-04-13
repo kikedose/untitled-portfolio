@@ -9,8 +9,11 @@ import {
 } from '~/components/ui/dialog';
 import LanguageSwitch from './LanguageSwitch';
 import ThemeSwitch from './ThemeSwitch';
+import { getDictionary } from '~/lib/l10n';
 
-export default function Navigation() {
+export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
+  const d = await getDictionary('studio', locale);
+
   return (
     <>
       {/* Set the md:px-N <body>'s max-w-N */}
@@ -30,18 +33,27 @@ export default function Navigation() {
                     Untitled Design Studio_
                   </DialogTitle>
                 </DialogHeader>
+
+                {/* Accesibility-only, keep hidden */}
                 <DialogDescription className="hidden">
                   Mobile Navigation Menu
                 </DialogDescription>
+
                 <ul className="text-center font-[family-name:var(--font-geist-mono)]">
                   <li className="py-2">
-                    <Link href="/">HOME {'->'}</Link>
+                    <Link href={`/${locale}`}>
+                      {d.navigation.home} {'->'}
+                    </Link>
                   </li>
                   <li className="py-2">
-                    <Link href="/web-labs">WEB LABS {'->'}</Link>
+                    <Link href={`/${locale}/web-labs`}>
+                      {d.navigation.web} {'->'}
+                    </Link>
                   </li>
                   <li className="py-2">
-                    <Link href="/info">INFO {'->'}</Link>
+                    <Link href={`/${locale}/info`}>
+                      {d.navigation.info} {'->'}
+                    </Link>
                   </li>
                   <li>
                     <span>
@@ -63,24 +75,24 @@ export default function Navigation() {
             Untitled Design Studio_
           </span>
           <Link
-            href="/"
-            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-200 hover:border-2"
+            href={`/${locale}`}
+            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm capitalize transition-all duration-200 hover:border-2"
           >
-            HOME
+            {d.navigation.home}
           </Link>
 
           <Link
-            href="/web-labs"
-            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-200 hover:border-2"
+            href={`/${locale}/web-labs`}
+            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm capitalize transition-all duration-200 hover:border-2"
           >
-            WEB LABS
+            {d.navigation.web}
           </Link>
 
           <Link
-            href="/info"
-            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-200 hover:border-2"
+            href={`/${locale}/info`}
+            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm capitalize transition-all duration-200 hover:border-2"
           >
-            INFO
+            {d.navigation.info}
           </Link>
 
           <span className="ml-auto">
