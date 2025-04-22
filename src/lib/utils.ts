@@ -78,7 +78,7 @@ export const parseAcceptLanguage = (
  * @param {string} defaultLocale The default locale to return if no match is found.
  * @returns {string} The best matching supported locale or the default locale.
  */
-export function findBestMatch(
+export function findBestLocaleMatch(
   preferredLanguages: string[],
   supportedLocales: string[],
   defaultLocale: string
