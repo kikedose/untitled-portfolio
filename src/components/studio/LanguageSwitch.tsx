@@ -12,13 +12,13 @@ export default function LanguageSwitch() {
     const nextLocale = locale === 'en' ? 'es' : 'en';
     const href = pathname.replace(locale, nextLocale);
 
-    router.replace(href);
+    router.replace(href, { scroll: false });
   };
 
   return (
     <button
+      className="cursor-pointer hover:underline hover:decoration-dotted"
       onClick={triggerLocaleSwitch}
-      className="hover:underline hover:decoration-dotted"
     >
       [{params.locale}]
     </button>

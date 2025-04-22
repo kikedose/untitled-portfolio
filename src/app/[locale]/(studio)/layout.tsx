@@ -2,13 +2,18 @@ import Footer from '~/components/studio/Footer';
 import Navigation from '~/components/studio/Navigation';
 import ScrollProgress from '~/components/studio/ScrollProgress';
 
-export default function StudioLayout({
+export default async function StudioLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: 'en' | 'es'; id?: string }>;
+}) {
+  const { locale } = await params;
   return (
     <>
       <ScrollProgress />
-      <Navigation />
+      <Navigation locale={locale} />
       <main className="w-full pt-8 md:pt-32">{children}</main>
       <Footer />
     </>

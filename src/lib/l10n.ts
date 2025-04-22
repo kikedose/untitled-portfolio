@@ -1,6 +1,7 @@
 import 'server-only';
 
 const dictionaries = {
+  // admin: {},
   studio: {
     en: () =>
       import('~/lib/dictionaries/studio/en.json').then(

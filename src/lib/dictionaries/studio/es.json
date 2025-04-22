@@ -1,4 +1,9 @@
 {
+  "navigation": {
+    "home": "Inicio",
+    "web": "Web Labs",
+    "info": "Info"
+  },
   "home": {
     "title": "Diseños que respiran.",
     "cta_01": {
@@ -11,13 +16,10 @@
       "_02": "identidades visuales distintivas",
       "_03": "que transmiten la",
       "_04": "esencia de cada marca.",
-      "_05": "Mira nuestro trabajo"
+      "_05": "Explora nuestro trabajo"
     },
-    "nested": {
-      "nested": "nested ES"
-    },
-    "nest_ed": {
-      "nest_ed": "nest_ed ES"
-    }
+    "hi": "Charlemos!",
+    "tell": "Cuéntanos sobre tu proyecto.",
+    "collab": "Colaboremos y logremos grandes cosas."
   }
 }

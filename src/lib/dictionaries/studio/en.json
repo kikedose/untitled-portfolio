@@ -1,4 +1,9 @@
 {
+  "navigation": {
+    "home": "Home",
+    "web": "Web Labs",
+    "info": "Info"
+  },
   "home": {
     "title": "Designs that breathe.",
     "cta_01": {
@@ -7,18 +12,15 @@
       "_03": "Check out our web labs"
     },
     "cta_02": {
-      "_01": "We&apos;re dedicated to crafting",
+      "_01": "We're dedicated to crafting",
       "_02": "distinctive visual identities",
       "_03": "that speak to",
       "_04": "the essence of each brand.",
       "_05": "Check out our work"
     },
-    "nested": {
-      "nested": "nested EN"
-    },
-    "nest_ed": {
-      "nest_ed": "nest_ed EN"
-    }
+    "hi": "Say hi!",
+    "tell": "Tell us about your project.",
+    "collab": "Let's collaborate and make great stuff."
   }
 }
 

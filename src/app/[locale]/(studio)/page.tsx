@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ProjectCard from '~/components/studio/ProjectCard';
 import {
   CircleArrowDown,
@@ -35,12 +36,13 @@ export default async function HomePage({
               {d.home.cta_01._01}{' '}
               <span className="text-teal-700">{d.home.cta_01._02}</span>
               <br />
-              <span className="pt-4">
-                <a href="#projects" className="underline decoration-dotted">
-                  {d.home.cta_01._03}
-                  <CircleArrowRight className="ml-2 inline" />
-                </a>
-              </span>
+                <Link
+                  href={`${locale}/web-labs`}
+                  className="inline-block pt-4 underline decoration-dotted"
+                >
+                {d.home.cta_01._03}
+                <CircleArrowRight className="ml-2 inline" />
+              </Link>
             </p>
           </div>
 
@@ -52,7 +54,10 @@ export default async function HomePage({
               <span className="text-orange-300">{d.home.cta_02._04} </span>
               <br />
               <span className="pt-4">
-                <a href="#projects" className="underline decoration-dotted">
+                <a
+                  href={`${locale}/web-labs`}
+                  className="inline-block pt-4 underline decoration-dotted"
+                >
                   {d.home.cta_02._05}
                   <CircleArrowDown className="ml-2 inline" />
                 </a>
@@ -117,17 +122,15 @@ export default async function HomePage({
         <div className="halftone px-8 md:w-2/4">
           <h1 className="py-16 text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
             <span className="bg-background box-decoration-clone px-4">
-              Say hi!
+              {d.home.hi}
             </span>
           </h1>
         </div>
 
         <div className="grid place-items-center md:w-2/4">
           <span>
-            <p className="text-lg font-semibold">Tell us about your project.</p>
-            <p className="text-lg">
-              Let&apos;s collaborate and make great stuff.
-            </p>
+            <p className="text-lg font-semibold">{d.home.tell}</p>
+            <p className="text-lg">{d.home.collab}</p>
 
             <div className="border-foreground mt-4 w-min rounded-md border-2 p-2">
               <ul className="inline-flex flex-row gap-4">
