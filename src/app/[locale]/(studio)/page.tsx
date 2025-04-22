@@ -30,11 +30,11 @@ export default async function HomePage({
           </span>
         </h1>
 
-        <div className="mt-4 flex flex-col items-center justify-center gap-4 md:flex-row">
+        <div className="mt-4 flex flex-col items-center justify-center gap-4 md:flex-row md:justify-start">
           <div className="bg-background border-primary max-w-sm rounded-md border-2 p-4 font-[family-name:var(--font-geist-mono)]">
             <p className="text-center text-lg md:text-left md:text-xl">
               {d.home.cta_01._01}{' '}
-              <span className="text-teal-700">{d.home.cta_01._02}</span>
+              <span className="bg-teal-700">{d.home.cta_01._02}</span>
               <br />
               <Link
                 href={`${locale}/web-labs`}
@@ -49,9 +49,8 @@ export default async function HomePage({
           <div className="bg-background border-primary max-w-sm rounded-md border-2 p-4 font-[family-name:var(--font-geist-mono)]">
             <p className="text-center text-lg md:text-left md:text-xl">
               {d.home.cta_02._01}{' '}
-              <span className="text-rose-700">{d.home.cta_02._02} </span>
-              {d.home.cta_02._03}{' '}
-              <span className="text-orange-300">{d.home.cta_02._04} </span>
+              <span className="bg-purple-700">{d.home.cta_02._02} </span>
+              {d.home.cta_02._03} <span>{d.home.cta_02._04} </span>
               <br />
               <span className="pt-4">
                 <a
