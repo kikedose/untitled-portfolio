@@ -30,16 +30,16 @@ export default async function HomePage({
           </span>
         </h1>
 
-        <div className="mt-4 flex flex-col gap-4 md:flex-row">
+        <div className="mt-4 flex flex-col items-center justify-center gap-4 md:flex-row">
           <div className="bg-background border-primary max-w-sm rounded-md border-2 p-4 font-[family-name:var(--font-geist-mono)]">
             <p className="text-center text-lg md:text-left md:text-xl">
               {d.home.cta_01._01}{' '}
               <span className="text-teal-700">{d.home.cta_01._02}</span>
               <br />
-                <Link
-                  href={`${locale}/web-labs`}
-                  className="inline-block pt-4 underline decoration-dotted"
-                >
+              <Link
+                href={`${locale}/web-labs`}
+                className="inline-block pt-4 underline decoration-dotted"
+              >
                 {d.home.cta_01._03}
                 <CircleArrowRight className="ml-2 inline" />
               </Link>
