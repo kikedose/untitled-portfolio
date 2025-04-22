@@ -20,9 +20,13 @@ export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
       <nav className="fixed inset-x-0 top-0 z-50 md:px-8">
         {/* MOBILE NAVIGATION */}
         <div className="bg-background/20 flex w-full justify-between p-4 backdrop-blur-md md:hidden">
-          <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium dark:font-semibold">
-            unttld_
-          </span>
+          <Link
+            href={`/${locale}`}
+          >
+            <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium dark:font-semibold">
+              unttld_
+            </span>
+          </Link>
 
           <span>
             <Dialog>
