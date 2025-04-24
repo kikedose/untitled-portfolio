@@ -7,19 +7,16 @@
   "home": {
     "title": "Diseños que respiran.",
     "cta_01": {
-      "_01": "Le damos vida a tu marca en línea con meticuloso",
+      "_01": "Le damos vida a tu marca con meticuloso",
       "_02": "diseño y desarrollo web.",
-      "_03": "Conoce nuestros web labs"
-    },
-    "cta_02": {
-      "_01": "Nos dedicamos a la creación de",
-      "_02": "identidades visuales distintivas",
-      "_03": "que transmiten la",
-      "_04": "esencia de cada marca.",
-      "_05": "Explora nuestro trabajo"
+      "_03": "Explora nuestro trabajo"
     },
     "hi": "Charlemos!",
     "tell": "Cuéntanos sobre tu proyecto.",
     "collab": "Colaboremos y logremos grandes cosas."
+  },
+  "info": {
+    "title": "Somos un estudio independiente que conecta marca y producto.",
+    "description": "Creamos identidades visuales con personalidad y experiencias digitales que funcionan—desde el branding hasta el diseño UI/UX y el desarrollo de apps web. Ya sea que estés arrancando de cero o quieras darle una vuelta a lo que ya tenés, te ayudamos a darle claridad, coherencia y estilo a tu marca en todos los puntos de contacto."
   }
 }

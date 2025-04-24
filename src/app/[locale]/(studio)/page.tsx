@@ -1,12 +1,5 @@
-import Link from 'next/link';
 import ProjectCard from '~/components/studio/ProjectCard';
-import {
-  CircleArrowDown,
-  CircleArrowRight,
-  Instagram,
-  Mail,
-  PhoneOutgoing,
-} from 'lucide-react';
+import { CircleArrowDown, Instagram, Mail, PhoneOutgoing } from 'lucide-react';
 import { retrieveAllProjects } from '~/lib/queries';
 import { getDictionary } from '~/lib/l10n';
 import '~/styles/styles.css';
@@ -22,55 +15,57 @@ export default async function HomePage({
   const projects = await retrieveAllProjects();
 
   return (
-    <div className="flex flex-col justify-center font-[family-name:var(--font-geist-sans)] md:justify-start">
-      <section className="halftone w-full px-2 pb-8 md:pl-8">
-        <h1 className="mx-auto max-w-[12ch] py-16 text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
+    <div className="flex flex-col font-[family-name:var(--font-geist-sans)]">
+      <section className="halftone flex w-full flex-col items-center gap-8 px-2 pt-16 pb-8 md:pb-16 lg:flex-row-reverse">
+        <h1 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
           <span className="bg-background box-decoration-clone px-4">
             {d.home.title}
           </span>
         </h1>
 
-        <div className="mt-4 flex flex-col items-center justify-center gap-4 md:flex-row md:justify-start">
-          <div className="bg-background border-primary max-w-sm rounded-md border-2 p-4 font-[family-name:var(--font-geist-mono)]">
-            <p className="text-center text-lg md:text-left md:text-xl">
-              {d.home.cta_01._01}{' '}
-              <span className="bg-teal-700">{d.home.cta_01._02}</span>
-              <br />
-              <Link
-                href={`${locale}/web-labs`}
-                className="inline-block pt-4 underline decoration-dotted"
-              >
-                {d.home.cta_01._03}
-                <CircleArrowRight className="ml-2 inline" />
-              </Link>
-            </p>
-          </div>
+        <div className="flex max-w-xs flex-col justify-center py-8 md:py-0 lg:w-1/3">
+          <p className="text-center font-[family-name:var(--font-geist-mono)] text-lg md:text-right md:text-2xl">
+            <span className="bg-background p-1">{d.home.cta_01._01} </span>
+            <span className="bg-lime-700 p-1">{d.home.cta_01._02}</span>
+            <br />
+            <br />
+          </p>
 
-          <div className="bg-background border-primary max-w-sm rounded-md border-2 p-4 font-[family-name:var(--font-geist-mono)]">
-            <p className="text-center text-lg md:text-left md:text-xl">
-              {d.home.cta_02._01}{' '}
-              <span className="bg-purple-700">{d.home.cta_02._02} </span>
-              {d.home.cta_02._03} <span>{d.home.cta_02._04} </span>
-              <br />
-              <span className="pt-4">
-                <a
-                  href={`${locale}/web-labs`}
-                  className="inline-block pt-4 underline decoration-dotted"
-                >
-                  {d.home.cta_02._05}
-                  <CircleArrowDown className="ml-2 inline" />
-                </a>
-              </span>
-            </p>
-          </div>
+          <span className="bg-background p-2 text-center md:w-max md:self-end">
+            <a
+              href="#featured-work"
+              className="inline-block text-sm uppercase hover:underline hover:decoration-dotted"
+            >
+              {d.home.cta_01._03}
+              <CircleArrowDown className="ml-2 inline" />
+            </a>
+          </span>
         </div>
       </section>
 
       {/* Divider */}
-      <div className="border-foreground my-16 w-full border-b-2 text-xl md:text-2xl" />
+      <div
+        id="featured-work"
+        className="border-foreground my-8 w-full border-b-2 md:my-16"
+      />
 
-      <section className="flex w-full justify-center" id="projects">
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <section className="flex w-full flex-col flex-wrap md:flex-row">
+        <div className="md:w-1/2 md:px-8 xl:w-1/3">
+          <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
+            Featured <br className="hidden md:block" /> work
+          </h2>
+          {/* Divider */}
+          <div className="border-foreground my-8 hidden w-full border-b-2 md:my-16 md:block" />
+
+          <div className="py-8 text-center font-[family-name:var(--font-geist-mono)] md:py-0 md:text-left">
+            We&apos;re dedicated to crafting{' '}
+            <span className="bg-lime-700">distinctive visual identities</span>{' '}
+            that speak to{' '}
+            <em className="underline">the essence of each brand</em>.
+          </div>
+        </div>
+
+        <div className="grid place-content-end gap-8 md:w-1/2 xl:w-2/3 xl:grid-cols-2">
           {projects?.map((project) => (
             <ProjectCard
               id={project.id}
@@ -98,10 +93,10 @@ export default async function HomePage({
       </section>
 
       {/* Divider */}
-      <div className="border-foreground my-16 w-full border-b-2 text-xl md:text-2xl" />
+      <div className="border-foreground my-8 w-full border-b-2 md:my-16" />
 
-      <section className="flex flex-col flex-wrap py-16 md:flex-row">
-        <div className="halftone px-8 md:w-2/4">
+      <section className="flex w-full flex-col flex-wrap md:flex-row">
+        <div className="halftone px-8 md:w-1/2">
           <h1 className="py-16 text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
             <span className="bg-background box-decoration-clone px-4">
               {d.home.hi}
@@ -109,12 +104,12 @@ export default async function HomePage({
           </h1>
         </div>
 
-        <div className="grid place-items-center md:w-2/4">
+        <div className="grid place-items-center md:w-1/2">
           <span>
             <p className="text-lg font-semibold">{d.home.tell}</p>
             <p className="text-lg">{d.home.collab}</p>
 
-            <div className="border-foreground mt-4 w-min rounded-md border-2 p-2">
+            <div className="border-foreground mt-4 w-min rounded-md border-2 px-2 pt-2">
               <ul className="inline-flex flex-row gap-4">
                 <li>
                   <a

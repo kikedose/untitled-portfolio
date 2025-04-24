@@ -7,20 +7,17 @@
   "home": {
     "title": "Designs that breathe.",
     "cta_01": {
-      "_01": "We bring brands to life online with thoughtful",
-      "_02": "web design and development.",
-      "_03": "Check out our web labs"
-    },
-    "cta_02": {
-      "_01": "We're dedicated to crafting",
-      "_02": "distinctive visual identities",
-      "_03": "that speak to",
-      "_04": "the essence of each brand.",
-      "_05": "Check out our work"
+      "_01": "We bring brands to life with thoughtful",
+      "_02": "design and development.",
+      "_03": "Check out our work"
     },
     "hi": "Say hi!",
     "tell": "Tell us about your project.",
     "collab": "Let's collaborate and make great stuff."
+  },
+  "info": {
+    "title": "We’re a small studio that bridges the gap between brand and product.",
+    "description": "We craft visual identities that resonate and build digital experiences that perform—from thoughtful branding to intuitive UI/UX and web app development. Whether you're starting fresh or refining what’s already there, we help bring clarity, consistency, and elegance to your brand across every touchpoint."
   }
 }
 
