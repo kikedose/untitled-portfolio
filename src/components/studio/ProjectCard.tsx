@@ -22,7 +22,7 @@ export default function ProjectCard({
     <div className="overflow-clip lg:h-[28rem] lg:w-[24rem]">
       <Link href={`/en/projects/${id}`}>
         <Image
-          className="transition-all duration-400 hover:rounded-lg hover:opacity-75"
+          className="rounded-lg transition-all duration-400 hover:opacity-75"
           src={thumbnail}
           alt={title}
           width={384}
