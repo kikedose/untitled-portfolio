@@ -20,18 +20,22 @@ export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
       <nav className="fixed inset-x-0 top-0 z-50 md:px-8">
         {/* MOBILE NAVIGATION */}
         <div className="bg-background/20 flex w-full justify-between p-4 backdrop-blur-md md:hidden">
-          <Link
-            href={`/${locale}`}
-          >
+          <Link href={`/${locale}`}>
             <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium dark:font-semibold">
               unttld_
             </span>
           </Link>
 
           <span>
+            <span className="px-4">
+              <ThemeSwitch />
+              &nbsp;
+              <LanguageSwitch />
+            </span>
+
             <Dialog>
               <DialogTrigger className="outline-none">[menu]</DialogTrigger>
-              <DialogContent className="border-foreground dark:bg-background/40 bg-background/50 border-2 backdrop-blur-sm">
+              <DialogContent className="border-foreground dark:bg-background/40 bg-background/65 border-2 backdrop-blur-sm">
                 <DialogHeader>
                   <DialogTitle className="font-[family-name:var(--font-geist-mono)] text-sm font-semibold">
                     Untitled Design Studio_
@@ -58,13 +62,6 @@ export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
                     <Link href={`/${locale}/info`}>
                       {d.navigation.info} {'->'}
                     </Link>
-                  </li>
-                  <li>
-                    <span>
-                      <ThemeSwitch />
-                      &nbsp;
-                      <LanguageSwitch />
-                    </span>
                   </li>
                 </ul>
               </DialogContent>
