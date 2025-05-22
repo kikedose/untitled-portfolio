@@ -111,7 +111,11 @@ export default async function HomePage({
               We connect brands and users through pragmatic experiences, both in{' '}
               <span className="bg-lime-700">digital and analogue</span> media.
             </p>
-            <br />
+          </div>
+        </div>
+
+        <div className="md:w-1/2 xl:w-2/3">
+          <div className="float-right w-sm text-right">
             {[
               'visual identity',
               'creative consultancy',
@@ -128,10 +132,6 @@ export default async function HomePage({
               </span>
             ))}
           </div>
-        </div>
-
-        <div className="md:w-1/2 xl:w-2/3">
-          We connect brands and users through pragmatic experiences.
         </div>
       </section>
 

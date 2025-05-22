@@ -1,3 +1,14 @@
+import { Input } from '~/components/ui/input';
+import { Label } from '~/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '~/components/ui/select';
 import { getDictionary } from '~/lib/l10n';
 
 export default async function Info({
@@ -11,26 +22,40 @@ export default async function Info({
   return (
     <div>
       <div>
-        <h2>{d.info.title}</h2>
+        <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
+          {d.info.title}
+        </h2>
         <p>{d.info.description}</p>
       </div>
 
-      <div className="w-sm overflow-clip rounded-lg p-8 text-xl text-zinc-500">
-        {[
-          'visual identity',
-          'editorial design',
-          'creative consultancy',
-          'naming',
-          'web design',
-        ].map((service) => (
-          <span
-            key={service}
-            className="m-1 inline-block rounded-md border border-zinc-500 p-2 text-sm"
-          >
-            #{service.replaceAll(' ', '_')}
-          </span>
-        ))}
-      </div>
+      <form>
+        <Label htmlFor="name">Organization</Label>
+        <Input type="text" id="name" placeholder="Enterprise" />
+
+        <Label htmlFor="email">Email</Label>
+        <Input type="email" id="email" placeholder="Email" />
+
+        <Label htmlFor="subject">Subject</Label>
+        <Select>
+          <SelectTrigger className="">
+            <SelectValue placeholder="Select a subject" />
+          </SelectTrigger>
+
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Subject</SelectLabel>
+
+              <SelectItem value="Visual Identity">Visual Identity</SelectItem>
+              <SelectItem value="Branding">Branding</SelectItem>
+              <SelectItem value="UI Design">UI Design</SelectItem>
+              <SelectItem value="Web App Development">
+                Web App Development
+              </SelectItem>
+              <SelectItem value="Website Development">Pineapple</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </form>
     </div>
   );
 }
