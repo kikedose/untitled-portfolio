@@ -23,56 +23,59 @@ export default async function Info({
 
   return (
     <div>
-      <div className="flex flex-col gap-4 pt-8 pb-8 md:flex-row md:pt-0">
+      <div className="pt-8 pb-8 md:pt-0">
         <h2 className="mx-auto max-w-[12ch] text-center text-3xl/12 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
           {d.info.title}
         </h2>
+      </div>
+
+      <div className="border-foreground flex flex-col gap-4 rounded-md border-2 border-solid p-8 md:flex-row">
+        <div className="flex max-w-lg flex-col gap-4 border border-solid border-red-500">
+          <form>
+            <>
+              <Label htmlFor="name">Organization</Label>
+              <Input type="text" id="name" placeholder="Enterprise" />
+            </>
+
+            <>
+              <Label htmlFor="email">Email</Label>
+              <Input type="email" id="email" placeholder="Email" />
+            </>
+
+            <>
+              <Label htmlFor="subject">Subject</Label>
+              <Select>
+                <SelectTrigger className="">
+                  <SelectValue placeholder="Select a subject" />
+                </SelectTrigger>
+
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Subject</SelectLabel>
+
+                    <SelectItem value="Visual Identity">
+                      Visual Identity
+                    </SelectItem>
+                    <SelectItem value="Branding">Branding</SelectItem>
+                    <SelectItem value="UI Design">UI Design</SelectItem>
+                    <SelectItem value="Web App Development">
+                      Web App Development
+                    </SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </>
+
+            <Label>Yeet</Label>
+            <Textarea />
+
+            <Button>Submit</Button>
+          </form>
+        </div>
+
         <p className="max-w-lg text-center md:text-right">
           {d.info.description}
         </p>
-      </div>
-
-      <div className="border-foreground rounded-md border-2 border-solid p-8">
-        <form className="flex max-w-lg flex-col gap-4">
-          <>
-            <Label htmlFor="name">Organization</Label>
-            <Input type="text" id="name" placeholder="Enterprise" />
-          </>
-
-          <>
-            <Label htmlFor="email">Email</Label>
-            <Input type="email" id="email" placeholder="Email" />
-          </>
-
-          <>
-            <Label htmlFor="subject">Subject</Label>
-            <Select>
-              <SelectTrigger className="">
-                <SelectValue placeholder="Select a subject" />
-              </SelectTrigger>
-
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>Subject</SelectLabel>
-
-                  <SelectItem value="Visual Identity">
-                    Visual Identity
-                  </SelectItem>
-                  <SelectItem value="Branding">Branding</SelectItem>
-                  <SelectItem value="UI Design">UI Design</SelectItem>
-                  <SelectItem value="Web App Development">
-                    Web App Development
-                  </SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </>
-
-          <Label>Yeet</Label>
-          <Textarea />
-
-          <Button>Submit</Button>
-        </form>
       </div>
     </div>
   );
