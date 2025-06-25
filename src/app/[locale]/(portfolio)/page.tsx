@@ -1,4 +1,4 @@
-import ProjectCard from '~/components/studio/ProjectCard';
+import ProjectCard from '~/components/portfolio/ProjectCard';
 import { CircleArrowDown, Instagram, Mail, PhoneOutgoing } from 'lucide-react';
 import { retrieveAllProjects } from '~/lib/queries';
 import { getDictionary } from '~/lib/l10n';
@@ -44,10 +44,7 @@ export default async function HomePage({
       </section>
 
       {/* Divider */}
-      <div
-        id="featured-work"
-        className="border-foreground my-8 w-full scroll-mt-16 border-b-2 md:my-16"
-      />
+      <div className="border-foreground my-8 w-full scroll-mt-16 border-b-2 md:my-16" />
 
       <section className="flex w-full flex-col flex-wrap md:flex-row">
         <div className="md:w-1/2 md:px-8 xl:w-1/3">
@@ -93,10 +90,7 @@ export default async function HomePage({
       </section>
 
       {/* Divider */}
-      <div
-        id="what-we-do"
-        className="border-foreground my-8 w-full border-b-2 md:my-16"
-      />
+      <div className="border-foreground my-8 w-full border-b-2 md:my-16" />
 
       <section className="flex w-full flex-col flex-wrap md:flex-row">
         <div className="md:w-1/2 md:px-8 xl:w-1/3">

@@ -1,6 +1,6 @@
 import { type Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { ThemeProvider } from '~/components/studio/ThemeProvider';
+import { ThemeProvider } from '~/components/portfolio/ThemeProvider';
 import '~/styles/globals.css';
 
 export const metadata: Metadata = {

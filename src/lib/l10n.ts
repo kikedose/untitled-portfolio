@@ -4,11 +4,11 @@ const dictionaries = {
   // admin: {},
   studio: {
     en: () =>
-      import('~/lib/dictionaries/studio/en.json').then(
+      import('~/lib/dictionaries/portfolio/en.json').then(
         (module) => module.default
       ),
     es: () =>
-      import('~/lib/dictionaries/studio/es.json').then(
+      import('~/lib/dictionaries/portfolio/es.json').then(
         (module) => module.default
       ),
   },

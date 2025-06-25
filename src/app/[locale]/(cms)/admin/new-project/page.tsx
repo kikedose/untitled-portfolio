@@ -1,4 +1,4 @@
-import NewProjectForm from '~/components/admin/NewProjectForm';
+import NewProjectForm from '~/components/cms/NewProjectForm';
 
 export default function NewProject() {
   return (
