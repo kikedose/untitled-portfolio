@@ -1,4 +1,5 @@
 import ProjectCard from '~/components/portfolio/ProjectCard';
+import ServiceList from '~/components/portfolio/ServiceList';
 import { CircleArrowDown, Instagram, Mail, PhoneOutgoing } from 'lucide-react';
 import { retrieveAllProjects } from '~/lib/queries';
 import { getDictionary } from '~/lib/l10n';
@@ -26,7 +27,7 @@ export default async function HomePage({
         <div className="flex max-w-xs flex-col justify-center py-8 md:py-0 lg:w-1/3">
           <p className="text-center font-[family-name:var(--font-geist-mono)] text-lg md:text-right md:text-2xl">
             <span className="bg-background p-1">{d.home.cta_01._01} </span>
-            <span className="bg-lime-700 p-1">{d.home.cta_01._02}</span>
+            <span className="bg-orange-600 p-1">{d.home.cta_01._02}</span>
             <br />
             <br />
           </p>
@@ -44,19 +45,22 @@ export default async function HomePage({
       </section>
 
       {/* Divider */}
-      <div className="border-foreground my-8 w-full scroll-mt-16 border-b-2 md:my-16" />
+      <div
+        className="border-foreground my-8 w-full scroll-mt-16 border-b-2 md:my-16"
+        id="featured-work"
+      />
 
       <section className="flex w-full flex-col flex-wrap md:flex-row">
         <div className="md:w-1/2 md:px-8 xl:w-1/3">
           <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
-            Featured work
+            <span className="text-orange-600">(01)</span> / featured work
           </h2>
           {/* Divider */}
           <div className="border-foreground my-8 hidden w-full border-b-2 md:my-16 md:block" />
 
           <p className="py-8 text-center font-[family-name:var(--font-geist-mono)] md:py-0 md:text-left">
             We&apos;re dedicated to crafting{' '}
-            <span className="bg-lime-700">distinctive visual identities</span>{' '}
+            <span className="bg-orange-600">distinctive visual identities</span>{' '}
             that speak to{' '}
             <em className="underline">the essence of each brand</em>.
           </p>
@@ -95,7 +99,7 @@ export default async function HomePage({
       <section className="flex w-full flex-col flex-wrap md:flex-row">
         <div className="md:w-1/2 md:px-8 xl:w-1/3">
           <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
-            What we do
+            <span className="text-orange-600">(2)</span> / what we do
           </h2>
           {/* Divider */}
           <div className="border-foreground my-8 hidden w-full border-b-2 md:my-16 md:block" />
@@ -103,28 +107,14 @@ export default async function HomePage({
           <div className="font-[family-name:var(--font-geist-mono)]">
             <p>
               We connect brands and users through pragmatic experiences, both in{' '}
-              <span className="bg-lime-700">digital and analogue</span> media.
+              <span className="bg-orange-600">digital and analogue</span> media.
             </p>
           </div>
         </div>
 
         <div className="md:w-1/2 xl:w-2/3">
-          <div className="float-right w-sm text-right">
-            {[
-              'visual identity',
-              'creative consultancy',
-              'naming',
-              'ui/ux',
-              'web design',
-              'web app develpment',
-            ].map((service) => (
-              <span
-                key={service}
-                className="border-primary text-primary m-1 inline-block rounded-md border p-2 text-sm"
-              >
-                #{service.replaceAll(' ', '_')}
-              </span>
-            ))}
+          <div className="grid h-full w-full place-items-center rounded-md border border-gray-600">
+            YEET
           </div>
         </div>
       </section>
