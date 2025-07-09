@@ -38,7 +38,7 @@ export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
               <DialogContent className="border-foreground dark:bg-background/40 bg-background/65 border-2 backdrop-blur-sm">
                 <DialogHeader>
                   <DialogTitle className="font-[family-name:var(--font-geist-mono)] text-sm font-semibold">
-                    Untitled Design Studio_
+                    Untitled Systems_
                   </DialogTitle>
                 </DialogHeader>
 
@@ -49,13 +49,13 @@ export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
 
                 <ul className="text-center font-[family-name:var(--font-geist-mono)]">
                   <li className="py-2">
-                    <Link href={`/${locale}`}>
-                      {d.navigation.home} {'->'}
+                    <Link href={`/${locale}/design-studio`}>
+                      {d.navigation.design} {'->'}
                     </Link>
                   </li>
                   <li className="py-2">
-                    <Link href={`/${locale}/web-labs`}>
-                      {d.navigation.web} {'->'}
+                    <Link href={`/${locale}/dev-labs`}>
+                      {d.navigation.dev} {'->'}
                     </Link>
                   </li>
                   <li className="py-2">
@@ -72,21 +72,23 @@ export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
         {/* DESKTOP NAVIGATION */}
         {/* Set the max-w to the <body>'s max-w-N minus the px-M */}
         <div className="bg-background/20 border-foreground mx-auto mt-4 hidden h-16 w-full max-w-[calc(94rem-64px)] items-center gap-4 rounded-md border-2 px-8 backdrop-blur-sm md:flex">
-          <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium dark:font-semibold">
-            Untitled Design Studio_
-          </span>
+          <Link href={`/${locale}`}>
+            <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium hover:opacity-75 dark:font-semibold">
+              Untitled Systems_
+            </span>
+          </Link>
           <Link
-            href={`/${locale}`}
+            href={`/${locale}/design-studio`}
             className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm capitalize transition-all duration-200 hover:border-2"
           >
-            {d.navigation.home}
+            {d.navigation.design}
           </Link>
 
           <Link
-            href={`/${locale}/web-labs`}
+            href={`/${locale}/dev-labs`}
             className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm capitalize transition-all duration-200 hover:border-2"
           >
-            {d.navigation.web}
+            {d.navigation.dev}
           </Link>
 
           <Link

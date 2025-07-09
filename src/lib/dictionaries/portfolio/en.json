@@ -1,12 +1,16 @@
 {
   "navigation": {
     "home": "Home",
-    "web": "Web Labs",
+    "design": "Design Studio",
+    "dev": "Development Labs",
     "info": "Info"
   },
   "home": {
-    "title": "Designs that breathe.",
-    "cta_01": {
+    "title": "Untitled Systems"
+  },
+  "design": {
+    "title": "Designs that breathe",
+    "subtitle": {
       "_01": "We bring brands to life with thoughtful",
       "_02": "design and development.",
       "_03": "Check out our work"
@@ -20,4 +24,3 @@
     "description": "Whether you're starting fresh or refining what’s already there, we help bring clarity to your brand across every touchpoint."
   }
 }
-

@@ -1,12 +1,16 @@
 {
   "navigation": {
     "home": "Inicio",
-    "web": "Web Labs",
+    "design": "Design Studio",
+    "dev": "Development Labs",
     "info": "Info"
   },
   "home": {
+    "title": "Untitled Systems"
+  },
+  "design": {
     "title": "Diseños que respiran.",
-    "cta_01": {
+    "subtitle": {
       "_01": "Le damos vida a tu marca con meticuloso",
       "_02": "diseño y desarrollo web.",
       "_03": "Explora nuestro trabajo"
