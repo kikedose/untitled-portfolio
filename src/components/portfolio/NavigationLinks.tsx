@@ -16,10 +16,14 @@ export default function DesktopNavigationLinks({
 }: {
   locale: 'en' | 'es';
   labels: {
-    home: 'Home';
-    design: 'Design Studio';
-    dev: 'Development Labs';
-    info: 'Info';
+    // home: 'Home';
+    // design: 'Design Studio';
+    // dev: 'Development Labs';
+    // info: 'Info';
+    home: string;
+    design: string;
+    dev: string;
+    info: string;
   };
 }) {
   const pathname = usePathname();
