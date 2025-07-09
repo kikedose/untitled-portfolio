@@ -49,7 +49,7 @@ export default function ProjectCard({
           </span>
         </h2>
 
-        <h3 className="text-primary-foreground bg-foreground w-max px-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-400 group-hover:bg-orange-200 group-hover:opacity-75">
+        <h3 className="text-primary-foreground bg-foreground w-max px-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-400 group-hover:bg-orange-950 dark:group-hover:bg-orange-200">
           {country}, {year}
         </h3>
       </Link>

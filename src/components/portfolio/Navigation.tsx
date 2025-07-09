@@ -9,6 +9,7 @@ import {
 } from '~/components/ui/dialog';
 import LanguageSwitch from './LanguageSwitch';
 import ThemeSwitch from './ThemeSwitch';
+import DesktopNavigationLinks from './NavigationLinks';
 import { getDictionary } from '~/lib/l10n';
 
 export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
@@ -72,31 +73,7 @@ export default async function Navigation({ locale }: { locale: 'en' | 'es' }) {
         {/* DESKTOP NAVIGATION */}
         {/* Set the max-w to the <body>'s max-w-N minus the px-M */}
         <div className="bg-background/20 border-foreground mx-auto mt-4 hidden h-16 w-full max-w-[calc(94rem-64px)] items-center gap-4 rounded-md border-2 px-8 backdrop-blur-sm md:flex">
-          <Link href={`/${locale}`}>
-            <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium hover:opacity-75 dark:font-semibold">
-              Untitled Systems_
-            </span>
-          </Link>
-          <Link
-            href={`/${locale}/design-studio`}
-            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm capitalize transition-all duration-200 hover:border-2"
-          >
-            {d.navigation.design}
-          </Link>
-
-          <Link
-            href={`/${locale}/dev-labs`}
-            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm capitalize transition-all duration-200 hover:border-2"
-          >
-            {d.navigation.dev}
-          </Link>
-
-          <Link
-            href={`/${locale}/info`}
-            className="text-primary hover:border-primary active:bg-primary/50 rounded-md border-2 border-transparent px-3 py-2 font-[family-name:var(--font-geist-mono)] text-sm capitalize transition-all duration-200 hover:border-2"
-          >
-            {d.navigation.info}
-          </Link>
+          <DesktopNavigationLinks locale={locale} labels={d.navigation} />
 
           <span className="ml-auto">
             <ThemeSwitch />

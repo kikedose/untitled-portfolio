@@ -17,11 +17,15 @@ export default async function DesignStudio({
 
   return (
     <div className="flex flex-col font-[family-name:var(--font-geist-sans)]">
-      <section className="halftone mt-8 flex h-[85vh] w-full flex-col items-center justify-center gap-8 px-2 md:mt-0 md:h-[calc(100vh-14rem)] md:justify-start lg:flex-row-reverse">
-        <h1 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
+      <section className="halftone mt-8 flex h-[85vh] w-full flex-col items-center justify-center gap-8 px-2 md:mt-0 md:h-[calc(100vh-14rem)] md:justify-start lg:flex-row-reverse lg:justify-center">
+        <h1 className="max-w-[10ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-8xl/28 md:font-semibold">
           <span className="bg-background box-decoration-clone px-4">
-            {d.design.title}
-            <span className="animate-caret-blink text-orange-600">_</span>
+            {d.design.title._01}
+            <br />
+            <span className="font-thin tracking-widest text-slate-600">
+              {d.design.title._02}
+            </span>
+            <span className="animate-caret-blink text-orange-600">.</span>
           </span>
         </h1>
 
