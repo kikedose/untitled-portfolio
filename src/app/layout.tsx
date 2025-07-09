@@ -1,6 +1,6 @@
 import { type Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { ThemeProvider } from '~/components/studio/ThemeProvider';
+import { ThemeProvider } from '~/components/portfolio/ThemeProvider';
 import '~/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 });
+
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }];
+}
 
 export default async function RootLayout({
   children,

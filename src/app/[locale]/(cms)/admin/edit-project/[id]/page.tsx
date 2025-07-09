@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { type Project } from '~/lib/types/project';
-import { mockData } from '~/lib/mockData';
-import EditProjectForm from '~/components/admin/EditProjectForm';
+import { mockData } from '~/lib/mock/mockData';
+import EditProjectForm from '~/components/cms/EditProjectForm';
 
 async function getData(): Promise<Project[]> {
   return new Promise((resolve) => {
