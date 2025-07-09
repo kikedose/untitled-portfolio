@@ -1,5 +1,4 @@
 import ProjectCard from '~/components/portfolio/ProjectCard';
-// import ServiceList from '~/components/portfolio/ServiceList';
 import { CircleArrowDown, Instagram, Mail, PhoneOutgoing } from 'lucide-react';
 import { retrieveAllProjects } from '~/lib/queries';
 import { getDictionary } from '~/lib/l10n';
@@ -116,9 +115,25 @@ export default async function DesignStudio({
         </div>
 
         <div className="md:w-1/2 xl:w-2/3">
-          <div className="grid h-full w-full place-items-center rounded-md border border-gray-600">
-            YEET
-          </div>
+          {d.design.services.map((item, index) => (
+            <div
+              key={item.label}
+              className="border-b-foreground dark:border-b-muted border-b-solid flex flex-row flex-nowrap border-b py-8 last:border-b-0"
+            >
+              <div className="h-full pr-16 pl-4 text-xl font-medium text-orange-600/75">
+                {`_0${index + 1}`}
+              </div>
+
+              <div className="max-w-xl">
+                <h3 className="w-full pb-4 text-xl font-medium">
+                  {item.label}
+                </h3>
+                <p className="text-muted-foreground w-full font-medium">
+                  {item.text}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
