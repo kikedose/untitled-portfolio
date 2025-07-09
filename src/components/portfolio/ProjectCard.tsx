@@ -33,14 +33,16 @@ export default function ProjectCard({
           quality={80}
         />
 
-        <h2 className="text-primary relative inline-block text-xl transition-colors duration-400 group-hover:text-orange-600">
+        <h2 className="relative inline-block text-xl">
           <span
             className="absolute left-[-0.5ch] hidden translate-y-[-1rem] opacity-0 transition-all duration-400 group-hover:translate-y-0 group-hover:opacity-100 md:inline"
             aria-hidden
           >
             {'('}
           </span>
-          <span>{title}</span>
+          <span className="text-primary transition-colors duration-400 group-hover:text-orange-600">
+            {title}
+          </span>
           <span
             className="absolute right-[-0.5ch] hidden translate-y-[-1rem] opacity-0 transition-all duration-400 group-hover:translate-y-0 group-hover:opacity-100 md:inline"
             aria-hidden
@@ -49,7 +51,7 @@ export default function ProjectCard({
           </span>
         </h2>
 
-        <h3 className="text-primary-foreground bg-foreground w-max px-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-400 group-hover:bg-orange-950 dark:group-hover:bg-orange-200">
+        <h3 className="text-primary-foreground bg-muted-foreground group-hover:bg-foreground w-max px-2 font-[family-name:var(--font-geist-mono)] text-sm transition-all duration-400">
           {country}, {year}
         </h3>
       </Link>
