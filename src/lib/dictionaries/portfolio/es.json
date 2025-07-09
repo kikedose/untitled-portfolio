@@ -1,12 +1,19 @@
 {
   "navigation": {
     "home": "Inicio",
-    "web": "Web Labs",
+    "design": "Design Studio",
+    "dev": "Development Labs",
     "info": "Info"
   },
   "home": {
-    "title": "Diseños que respiran.",
-    "cta_01": {
+    "title": "Untitled Systems"
+  },
+  "design": {
+    "title": {
+      "_01": "Diseños que",
+      "_02": "respiran"
+    },
+    "subtitle": {
       "_01": "Le damos vida a tu marca con meticuloso",
       "_02": "diseño y desarrollo web.",
       "_03": "Explora nuestro trabajo"
@@ -14,6 +21,19 @@
     "hi": "Charlemos!",
     "tell": "Cuéntanos sobre tu proyecto.",
     "collab": "Colaboremos y logremos grandes cosas."
+  },
+  "dev": {
+    "title": {
+      "_01": "Code",
+      "_02": "but with purpose"
+    },
+    "subtitle": {
+      "_01": "Rooted on",
+      "_02": "computation",
+      "_03": "Shaped for the",
+      "_04": "human experience.",
+      "_05": "Meet our team"
+    }
   },
   "info": {
     "title": "Somos un estudio independiente que conecta marca y producto.",

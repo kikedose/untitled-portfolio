@@ -1,3 +1,5 @@
+import { headers } from 'next/headers';
+
 import Footer from '~/components/portfolio/Footer';
 import Navigation from '~/components/portfolio/Navigation';
 import ScrollProgress from '~/components/portfolio/ScrollProgress';
@@ -10,6 +12,9 @@ export default async function StudioLayout({
   params: Promise<{ locale: 'en' | 'es'; id?: string }>;
 }) {
   const { locale } = await params;
+  const headersList = await headers();
+  console.log(headersList.entries());
+
   return (
     <>
       <ScrollProgress />
