@@ -45,7 +45,7 @@ export default function DesktopNavigationLinks({
           <span
             className={`before:content-["["] after:content-["]"] ${
               pathname.includes(link.label)
-                ? 'before:text-rose-500 after:text-rose-500'
+                ? 'before:text-rose-700 after:text-rose-700'
                 : 'before:opacity-0 after:opacity-0'
             }`}
           >
