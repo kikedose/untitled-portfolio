@@ -54,18 +54,22 @@ export default async function DesignStudio({
 
       <section className="flex w-full flex-col flex-wrap md:flex-row">
         <div className="md:w-1/2 md:px-8 xl:w-1/3">
-          <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
-            <span className="text-orange-600">(01)</span> / featured work
-          </h2>
-          {/* Divider */}
-          <div className="border-foreground my-8 hidden w-full border-b-2 md:my-16 md:block" />
+          <span className="lg:sticky lg:top-[8rem]">
+            <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
+              <span className="text-orange-600">(01)</span> / featured work
+            </h2>
+            {/* Divider */}
+            <div className="border-foreground my-8 hidden w-full border-b-2 md:my-16 md:block" />
 
-          <p className="py-8 text-center font-[family-name:var(--font-geist-mono)] md:py-0 md:text-left">
-            We&apos;re dedicated to crafting{' '}
-            <span className="bg-orange-600">distinctive visual identities</span>{' '}
-            that speak to{' '}
-            <em className="underline">the essence of each brand</em>.
-          </p>
+            <p className="py-8 text-center font-[family-name:var(--font-geist-mono)] md:py-0 md:text-left">
+              We&apos;re dedicated to crafting{' '}
+              <span className="bg-orange-600">
+                distinctive visual identities
+              </span>{' '}
+              that speak to{' '}
+              <em className="underline">the essence of each brand</em>.
+            </p>
+          </span>
         </div>
 
         <div className="grid place-content-end gap-8 md:w-1/2 xl:w-2/3 xl:grid-cols-2">
@@ -100,18 +104,21 @@ export default async function DesignStudio({
 
       <section className="flex w-full flex-col flex-wrap md:flex-row">
         <div className="md:w-1/2 md:px-8 xl:w-1/3">
-          <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
-            <span className="text-orange-600">(2)</span> / what we do
-          </h2>
-          {/* Divider */}
-          <div className="border-foreground my-8 hidden w-full border-b-2 md:my-16 md:block" />
+          <span className="lg:sticky lg:top-[8rem]">
+            <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
+              <span className="text-orange-600">(2)</span> / what we do
+            </h2>
+            {/* Divider */}
+            <div className="border-foreground my-8 hidden w-full border-b-2 md:my-16 md:block" />
 
-          <div className="font-[family-name:var(--font-geist-mono)]">
-            <p>
-              We connect brands and users through pragmatic experiences, both in{' '}
-              <span className="bg-orange-600">digital and analogue</span> media.
-            </p>
-          </div>
+            <div className="font-[family-name:var(--font-geist-mono)]">
+              <p>
+                We connect brands and users through pragmatic experiences, both
+                in <span className="bg-orange-600">digital and analogue</span>{' '}
+                media.
+              </p>
+            </div>
+          </span>
         </div>
 
         <div className="md:w-1/2 xl:w-2/3">
@@ -134,6 +141,45 @@ export default async function DesignStudio({
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Divider */}
+      <div className="border-foreground my-8 w-full border-b-2 md:my-16" />
+
+      <section className="flex w-full flex-col flex-wrap md:flex-row">
+        <div className="md:w-1/2 md:px-8 xl:w-1/3">
+          <span className="lg:sticky lg:top-[8rem]">
+            <h2 className="mx-auto max-w-[12ch] text-center text-5xl/14 font-medium tracking-tighter md:mx-0 md:text-left md:text-5xl/14 md:font-semibold">
+              <span className="text-orange-600">(3)</span> / our approach
+            </h2>
+            {/* Divider */}
+            <div className="border-foreground my-8 hidden w-full border-b-2 md:my-16 md:block" />
+
+            <div className="font-[family-name:var(--font-geist-mono)]">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
+                <span className="bg-orange-600">Ut enim ad minim veniam</span>,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat.
+              </p>
+            </div>
+          </span>
+        </div>
+
+        <div className="md:w-1/2 xl:w-2/3">
+          <div className="flex flex-col gap-32">
+            <div className="bg-foreground sticky top-[8rem] h-[75vh] min-h-96 w-full rounded-lg">
+              01
+            </div>
+            <div className="bg-muted-foreground sticky top-[12rem] h-[50vh] min-h-96 w-full rounded-lg">
+              01
+            </div>
+            <div className="sticky top-[16rem] h-[50vh] min-h-96 w-full rounded-lg bg-orange-600">
+              01
+            </div>
+          </div>
         </div>
       </section>
 
