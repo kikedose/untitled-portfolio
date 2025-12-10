@@ -1,8 +1,10 @@
 {
   "navigation": {
-    "studio": "Studio",
-    "work": "Info",
-    "contact": "Contact"
+    "work": "Proyectos",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero_foreground": "Menos ruido. Más señal.",
+    "hero_background": "Detrás de la estética hay estrategia y una investigación a fondo que dan forma a identidades con impacto a largo plazo."
   }
 }
-

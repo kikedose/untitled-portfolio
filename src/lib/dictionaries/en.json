@@ -1,7 +1,10 @@
 {
   "navigation": {
-    "studio": "Studio",
-    "work": "Info",
+    "work": "Work",
     "contact": "Contact"
+  },
+  "home": {
+    "hero_foreground": "Less noise. More signal.",
+    "hero_background": "Behind aesthetics lie strategic thinking and thorough research that shape identities with long-term impact."
   }
 }

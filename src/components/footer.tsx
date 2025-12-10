@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-primary my-8 w-full rounded-md border-2 p-4 md:px-8">
+    <footer className="border-primary w-full rounded-md border-2 px-8 py-4">
       <ul className="inline-flex flex-row gap-4">
         <li>
           <a

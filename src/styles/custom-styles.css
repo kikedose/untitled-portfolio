@@ -1,0 +1,7 @@
+.mask {
+  mask-image: url(../../public/circle.svg);
+  mask-repeat: no-repeat;
+  background: #ec4e39;
+  mask-size: 25px;
+  color: black;
+}

@@ -6,7 +6,6 @@ import type { Locale } from '~/lib/i18n';
 
 const navLinks = (locale: 'en' | 'es') =>
   [
-    { href: `/${locale}/`, label: 'home' },
     { href: `/${locale}/work`, label: 'work' },
     { href: `/${locale}/contact`, label: 'contact' },
   ] as const;
@@ -17,7 +16,6 @@ export default function DesktopNavigationLinks({
 }: {
   locale: Locale;
   labels: {
-    home: string;
     work: string;
     contact: string;
   };
