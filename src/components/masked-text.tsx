@@ -43,7 +43,9 @@ export default function MaskedText({
       className="border-foreground grid min-h-[calc(100vh-14rem)] place-items-center overflow-hidden rounded-md border-2 border-solid"
     >
       <div className="foreground flex h-full w-full items-center justify-center p-8 text-center text-4xl [grid-area:1/1]">
-        <p className="mx-auto max-w-4xl text-6xl">{foregroundText}</p>
+        <p className="mx-auto max-w-4xl text-center text-6xl">
+          {foregroundText}
+        </p>
       </div>
 
       <motion.div
@@ -56,7 +58,7 @@ export default function MaskedText({
         transition={{ type: 'tween', ease: 'easeOut', duration: 0.3 }}
       >
         <p
-          className="mx-auto max-w-4xl font-medium"
+          className="mx-auto max-w-4xl text-center font-medium"
           onMouseEnter={() => setIsTextHovered(true)}
           onMouseLeave={() => setIsTextHovered(false)}
         >

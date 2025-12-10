@@ -25,7 +25,8 @@ export default function DesktopNavigationLinks({
   return (
     <>
       <Link href={`/${locale}`}>
-        <span className="text-background bg-foreground font-family-name:var(--font-geist-mono) px-2 text-sm font-medium hover:opacity-75 dark:font-semibold">
+        {/* tailwindcss-disable-next-line suggestCanonicalClasses */}
+        <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium hover:opacity-75 dark:font-semibold">
           Untitled Design_
         </span>
       </Link>
