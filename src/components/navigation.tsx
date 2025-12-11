@@ -9,7 +9,7 @@ export default async function Navigation({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50">
+      <nav className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
         {/* DESKTOP NAVIGATION */}
         {/* Set the max-w to the <body>'s max-w-N minus the px-M */}
         <div className="bg-background/20 border-foreground mx-auto flex h-16 w-full items-center gap-4 rounded-md border-2 px-8 backdrop-blur-sm">

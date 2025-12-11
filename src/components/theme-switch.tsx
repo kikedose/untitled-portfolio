@@ -1,31 +1,40 @@
 'use client';
 
+// import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { useTheme } from 'next-themes';
 
 export default function ThemeSwitch() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
-  const handleSwitchTheme = (theme: string | undefined) => {
-    if (theme === 'light') {
-      setTheme('dark');
-      return;
-    }
+  // const [mounted, setMounted] = useState(false);
+  //
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-    if (theme === 'dark') {
-      setTheme('light');
-      return;
-    }
+  const mounted = useSyncExternalStore(
+    () => () => {}, // empty subscribe
+    () => true, // client value
+    () => false // server value
+  );
+  const handleSwitchTheme = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
+  if (!mounted) {
+    return <span>[ theme ]</span>;
+  }
+
   return (
-    <span>
+    <>
+      <span className="border-background bg-foreground mr-1 inline-block h-3 w-3 rounded-full border border-solid align-middle" />
       <button
         className="cursor-pointer hover:underline hover:decoration-dotted"
-        onClick={() => handleSwitchTheme(theme)}
-        suppressHydrationWarning
+        onClick={() => handleSwitchTheme()}
       >
-        [{theme ?? 'theme'}]
+        [ {resolvedTheme ?? 'theme'} ]
       </button>
-    </span>
+    </>
   );
 }
