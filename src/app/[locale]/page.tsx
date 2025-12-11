@@ -1,4 +1,4 @@
-import MaskedText from '~/components/masked-text';
+import MaskedText from '~/components/features/masked-text';
 import { getDictionary } from '~/lib/l10n';
 
 export default async function Home() {

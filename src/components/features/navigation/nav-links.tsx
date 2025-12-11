@@ -4,8 +4,9 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import type { Locale } from '~/lib/i18n';
 
-const navLinks = (locale: 'en' | 'es') =>
+const navLinks = (locale: Locale) =>
   [
+    { href: `/${locale}/`, label: 'home' },
     { href: `/${locale}/work`, label: 'work' },
     { href: `/${locale}/contact`, label: 'contact' },
   ] as const;
@@ -16,20 +17,22 @@ export default function DesktopNavigationLinks({
 }: {
   locale: Locale;
   labels: {
+    home: string;
     work: string;
     contact: string;
   };
 }) {
   const pathname = usePathname();
 
+  const generateLinks = () => {
+    Object.keys(labels).map((label) => ({ href: `/${locale}/${label}` }));
+  };
+
   return (
     <>
-      <Link href={`/${locale}`}>
-        {/* tailwindcss-disable-next-line suggestCanonicalClasses */}
-        <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium hover:opacity-75 dark:font-semibold">
-          Untitled Design_
-        </span>
-      </Link>
+      <span className="text-background bg-foreground px-2 font-[family-name:var(--font-geist-mono)] text-sm font-medium dark:font-semibold">
+        Untitled Design_
+      </span>
 
       {navLinks(locale).map((link) => (
         <Link

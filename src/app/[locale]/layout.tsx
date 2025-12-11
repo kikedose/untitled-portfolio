@@ -1,6 +1,6 @@
-import Footer from '~/components/footer';
-import Navigation from '~/components/navigation';
-import ScrollProgress from '~/components/scroll-progress';
+import Footer from '~/components/features/footer';
+import Navigation from '~/components/features/navigation';
+import ScrollProgress from '~/components/features/scroll-progress';
 
 export default async function StudioLayout({
   children,
